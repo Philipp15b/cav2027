@@ -15,7 +15,7 @@ _Conditionally accepted papers will be added once their acceptance is confirmed.
 
 * A-IC3: Learning-Guided Adaptive Inductive Generalization for Hardware Model Checking<font size="2"><br>Xiaofeng Zhou, Guangyu Hu (Hong Kong University of Science and Technology); Hongce Zhang (Hong Kong University of Science and Technology (Guangzhou)); Wei Zhang (Hong Kong University of Science and Technology)</font>
 
-* ATKVerifier: Adaptive Top-K Constraints for Tighter Verification of Semantic Segmentation Networks<font size="2"><br>Yuehao Liu, Cong Tian (ICTT and ISN Laboratory, Xidian University); Yansong Dong (Beijing Sunwise Information Technology Ltd); Liang Zhao, Chao Huang, Wensheng Wang (ICTT and ISN Laboratory, Xidian University)</font>
+* ATKVerifier: Adaptive Top-K Constraints for Tighter Verification of Semantic Segmentation Networks<font size="2"><br>Yuehao Liu, Cong Tian (ICTT and ISN Laboratory, Xidian University); Yansong Dong (KylinSoft Co., Ltd.); Liang Zhao, Chao Huang, Wensheng Wang (ICTT and ISN Laboratory, Xidian University)</font>
 
 * An L# Based Algorithm for Active Learning of Minimal Separating Automata<font size="2"><br>Jasper Laumen, Leonne Snel, Frits Vaandrager (Radboud University)</font>
 
@@ -73,7 +73,7 @@ _Conditionally accepted papers will be added once their acceptance is confirmed.
 
 * Perception with Guarantees: Certified Pose Estimation via Reachability Analysis<font size="2"><br>Tobias Ladner (Technical University of Munich); Yasser Shoukry (University of California, Irvine); Matthias Althoff (Technical University of Munich)</font>
 
-* Polynomial Invariant Generation for Floating Point Programs<font size="2"><br>Xuran Cai (University of Oxford); Liqian Chen (National University of Defense Technology); Hongfei Fu (Shanghai Jiao Tong University)</font>
+* Polynomial Invariant Generation for Floating Point Programs<font size="2"><br>Xuran Cai (University of Oxford); Liqian Chen (National University of Defense Technology); Hongfei Fu (Shanghai University of Finance and Economics)</font>
 
 * Precise Verification of Transformers through ReLU-Catalyzed Abstraction Refinement<font size="2"><br>Hengjie Liu, Zhenya Zhang, Jianjun Zhao (Kyushu University)</font>
 
@@ -99,7 +99,7 @@ _Conditionally accepted papers will be added once their acceptance is confirmed.
 
 * Tensor Probabilistic Model Checking of Finite-Horizon Markov Chains<font size="2"><br>Jianlin Li, Nick Guo, Peter Ye, Yizhou Zhang (University of Waterloo)</font>
 
-* The Cooperating Proof Calculus: Comprehensive Proofs for an SMT Solver<font size="2"><br>Andrew Reynolds, Hans-Jörg Schurr (The University of Iowa); Haniel Barbosa (Universidade Federal de Minas Gerais); Abdalrhman Mohamed, Hanna Lachnitt, Jibiana Zoe Jakpor (Stanford University); Yoni Zohar, Ofec Israel (Bar Ilan University); Clark Barrett (Stanford University); Cesare Tinelli (The University of Iowa); Aina Niemetz, Mathias Preiner (Stanford University)</font>
+* The Cooperating Proof Calculus: Comprehensive Proofs for an SMT Solver<font size="2"><br>Andrew Reynolds, Hans-Jörg Schurr (The University of Iowa); Haniel Barbosa (Universidade Federal de Minas Gerais); Ofec Israel (Bar Ilan University); Jibiana Zoe Jakpor, Hanna Lachnitt, Abdalrhman Mohamed, Aina Niemetz, Mathias Preiner (Stanford University); Yoni Zohar (Bar Ilan University); Robert Jones (Amazon Web Services); Clark Barrett (Stanford University); Cesare Tinelli (The University of Iowa)</font>
 
 * The Rocq-NN-Roll Prover: Soundly Verifying Hyperproperties of Neural Networks in Rocq<font size="2"><br>Andrei Aleksandrov (Fraunhofer Institute FOKUS Berlin); Malte Jackisch, Kim Völlinger (Technische Universität Berlin)</font>
 
@@ -149,7 +149,7 @@ _Conditionally accepted papers will be added once their acceptance is confirmed.
 
 * TACO: A Toolsuite for the Verification of Threshold Automata<font size="2"><br>Paul Eichler, Tom Baumeister (CISPA Helmholtz Center for Information Security); Mouhammad Sakr (American University of Beirut); Mahboubeh Kalateh Dowlati, Marcus Völp (Luxembourg University); Swen Jacobs (CISPA Helmholtz Center for Information Security)</font>
 
-* The TLA+ Model Checker Apalache<font size="2"><br>Rodrigo Otoni (University of Groningen); Shon Feder (Tarides); Jure Kukovec, Andrey Kupriyanov (Independent Researcher); Gabriela Moreira, Philip Offtermatt (Informal Systems); Thomas Pani, Thanh-Hai Tran, Igor Konnov (Independent Researcher)</font>
+* The TLA+ Model Checker Apalache<font size="2"><br>Rodrigo Otoni (University of Groningen); Shon Feder (Tarides); Jure Kukovec, Andrey Kupriyanov (Independent Researcher); Gabriela Moreira, Philip Offtermatt (Informal Systems); Thomas Pani (Independent Researcher); Thanh-Hai Tran (Université Paris-Saclay, CEA, List); Igor Konnov (Independent Researcher)</font>
 
 * Velvet: A Foundational Multi-Modal Verifier for Imperative Programs in Lean<font size="2"><br>Vladimir Gladshtein (National University of Singapore); Vitaly Kurin (Neapolis University Pafos); Yueyang Feng, Dipesh Kafle, George Pîrlea, Qiyuan Zhao, Ilya Sergey (National University of Singapore)</font>
 
