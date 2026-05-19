@@ -3,11 +3,36 @@ layout: page
 title: Keynotes
 ---
 
-## July 27: Maria Christakis
+## Deriving Test Oracles for Verification Infrastructure
+
+July 27: _[Maria Christakis](https://mariachris.github.io), TU Wien, Austria_
 
 <img src="https://conferences.i-cav.org/2026/assets/img/maria-tuwien.jpg" alt="Maria" width="300">
 
-_[Maria Christakis](https://mariachris.github.io), TU Wien, Austria_
+**Abstract:**
+Program analyzers and solvers are increasingly trusted as infrastructure
+for software correctness: they prove safety properties, find bugs,
+discharge verification conditions, and support automated-reasoning
+pipelines. Yet these tools are themselves complex software systems.
+Fully verifying modern analyzers and solvers in the verification stack
+is rarely realistic, which raises a complementary question: how do we
+test the tools that verify our programs?
+
+The central obstacle is the oracle problem. For many interesting inputs,
+we do not know in advance what the tool should report. This talk
+presents a journey through techniques for deriving such oracles. I will
+start with specification-based testing of analyzer components, then
+discuss program generation, differential testing, and metamorphic
+testing as ways to derive expected results when full specifications or
+ground truth are unavailable. I will then focus on interrogation
+testing, which makes testing adaptive by using previous answers to
+generate follow-up queries and expose contradictions.
+
+I will close by showing how the same oracle-centric view extends beyond
+analyzers to zero-knowledge systems, secure multiparty computation
+compilers, and machine-learning models. Across these domains, the goal
+is to make correctness claims testable by turning the artifacts that
+systems expose into oracles.
 
 **Bio:** Maria Christakis is a full professor at TU Wien, where she leads the
 Software Engineering research unit. Her work focuses on developing
