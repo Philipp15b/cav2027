@@ -1,0 +1,53 @@
+{% assign organizer_roles = include.roles | default: site.data.organizers.roles %}
+{% for role in organizer_roles %}
+  {% if role.featured %}
+  <section class="organizer-featured" aria-labelledby="organizer-featured-{{ forloop.index }}">
+    <h2 id="organizer-featured-{{ forloop.index }}">{{ role.title }}</h2>
+    <ul class="organizer-list organizer-featured__list">
+    {% for person in role.people %}
+      <li class="organizer-person organizer-person--photo">
+        {% if person.photo %}
+          <img class="organizer-photo" src="{{ person.photo | relative_url }}" alt="" width="72" height="72" loading="lazy">
+        {% endif %}
+        <span class="organizer-person__details">
+          {% if person.url %}
+            <a class="organizer-person__name" href="{{ person.url }}">{{ person.name }}</a>
+          {% else %}
+            <span class="organizer-person__name">{{ person.name }}</span>
+          {% endif %}
+          {% if person.affiliation %}
+            <span class="organizer-person__affiliation">{{ person.affiliation }}</span>
+          {% endif %}
+        </span>
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+{% endfor %}
+
+<div class="organizer-grid">
+{% for role in organizer_roles %}
+  {% unless role.featured %}
+  <section class="organizer-role">
+    <h2>{{ role.title }}</h2>
+    <ul class="organizer-list">
+    {% for person in role.people %}
+      <li class="organizer-person">
+        <span class="organizer-person__details">
+          {% if person.url %}
+            <a class="organizer-person__name" href="{{ person.url }}">{{ person.name }}</a>
+          {% else %}
+            <span class="organizer-person__name">{{ person.name }}</span>
+          {% endif %}
+          {% if person.affiliation %}
+            <span class="organizer-person__affiliation">{{ person.affiliation }}</span>
+          {% endif %}
+        </span>
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+  {% endunless %}
+{% endfor %}
+</div>

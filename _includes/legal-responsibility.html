@@ -1,0 +1,36 @@
+{% assign general_chairs = site.data.organizers.roles | where: "title", "General Chairs" | first %}
+{% assign website_chair = site.data.organizers.roles | where: "title", "Website Chair" | first %}
+
+<div class="organizer-grid">
+  <section class="organizer-role">
+    <h2>Responsible for Conference Content</h2>
+    <ul class="organizer-list">
+    {% for person in general_chairs.people %}
+      <li class="organizer-person">
+        <span class="organizer-person__details">
+          <a class="organizer-person__name" href="{{ person.url }}">{{ person.name }}</a>
+          {% if person.affiliation %}
+            <span class="organizer-person__affiliation">{{ person.affiliation }}</span>
+          {% endif %}
+        </span>
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+
+  <section class="organizer-role">
+    <h2>Responsible for Website Maintenance</h2>
+    <ul class="organizer-list">
+    {% for person in website_chair.people %}
+      <li class="organizer-person">
+        <span class="organizer-person__details">
+          <a class="organizer-person__name" href="{{ person.url }}">{{ person.name }}</a>
+          {% if person.affiliation %}
+            <span class="organizer-person__affiliation">{{ person.affiliation }}</span>
+          {% endif %}
+        </span>
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+</div>

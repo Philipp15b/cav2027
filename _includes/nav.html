@@ -1,62 +1,43 @@
-<nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}">
+<nav class="navbar navbar-expand-xl fixed-top navbar-custom" aria-label="Primary navigation">
+  <div class="container-xl">
 
-  {%- if site.title-img -%}
-    <a class="navbar-brand navbar-brand-logo" href="{{ '/' | absolute_url }}"><img alt="{{ site.title }} Logo" src="{{ site.title-img | relative_url}}"/></a>
-  {%- elsif site.title -%}
-    <a class="navbar-brand" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
-  {%- endif -%}
+    <a class="navbar-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="main-navbar">
-    <ul class="navbar-nav ml-auto">
-      {%- for link in site.navbar-links -%}
-        {%- if link[1].first %}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link[0] }}</a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              {%- for childlink in link[1] -%}
-                {%- for linkparts in childlink %}
-                  <a class="dropdown-item" href="{{ linkparts[1] | relative_url }}">{{ linkparts[0] }}</a>
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-xl-0">
+        {%- for link in site.navbar-links -%}
+          {%- if link[1].first %}
+            {%- assign dropdown_id = "navbarDropdown" | append: forloop.index -%}
+            {%- assign child_active = false -%}
+            {%- for childlink in link[1] -%}
+              {%- for linkparts in childlink -%}
+                {%- if page.url == linkparts[1] -%}
+                  {%- assign child_active = true -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endfor -%}
+            <li class="nav-item dropdown{% if child_active %} active{% endif %}">
+              <a class="nav-link dropdown-toggle{% if child_active %} active{% endif %}" href="#" id="{{ dropdown_id }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ link[0] }}</a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="{{ dropdown_id }}">
+                {%- for childlink in link[1] -%}
+                  {%- for linkparts in childlink %}
+                    <li><a class="dropdown-item{% if page.url == linkparts[1] %} active{% endif %}" href="{{ linkparts[1] | relative_url }}"{% if page.url == linkparts[1] %} aria-current="page"{% endif %}>{{ linkparts[0] }}</a></li>
+                  {%- endfor -%}
                 {%- endfor -%}
-              {%- endfor %}
-            </div>
-          </li>
-        {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ link[1] | relative_url }}">{{ link[0] }}</a>
-          </li>
-        {%- endif -%}
-      {%- endfor -%}
-      {% if site.post_search %}
-        <li class="nav-item">
-          <a class="nav-link" id="nav-search-link" href="#" title="Search">
-            <span id="nav-search-icon" class="fa fa-search"></span>
-            <span id="nav-search-text">Search</span>
-          </a>
-        </li>
-      {%- endif -%}
-    </ul>
-  </div>
-
-  {% if site.navbar-extra %}
-    {% for file in site.navbar-extra %}
-      {% include {{ file }} %}
-    {% endfor %}
-  {% endif %}
-
-  {% if site.avatar and page.show-avatar != false %}
-    <div class="avatar-container">
-      <div class="avatar-img-border">
-        <a href="{{ '/' | absolute_url }}">
-          <img alt="Navigation bar avatar" class="avatar-img" src="{{ site.avatar | relative_url }}" />
-        </a>
-      </div>
+              </ul>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a class="nav-link{% if page.url == link[1] %} active{% endif %}" href="{{ link[1] | relative_url }}"{% if page.url == link[1] %} aria-current="page"{% endif %}>{{ link[0] }}</a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
     </div>
-  {% endif %}
 
+  </div>
 </nav>
-
-{% include search.html %}

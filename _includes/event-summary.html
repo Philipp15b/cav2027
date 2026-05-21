@@ -1,0 +1,25 @@
+<section class="event-summary" aria-label="Conference summary">
+  <div class="event-summary__item">
+    <span class="event-summary__label">Conference</span>
+    <a class="event-summary__link" href="{{ '/program/' | relative_url }}">
+      <span class="event-summary__value">{{ site.data.conference.dates.conference }}</span>
+      <span class="event-summary__note">Workshops: July 19-20</span>
+      <span class="event-summary__note">Main conference: July 21-23</span>
+    </a>
+  </div>
+  <div class="event-summary__item">
+    <span class="event-summary__label">Location</span>
+    <a class="event-summary__link" href="{{ '/venue/' | relative_url }}">
+      <span class="event-summary__value">{{ site.data.conference.venue.city }}</span>
+      <span class="event-summary__note">{{ site.data.conference.venue.country }}</span>
+      <span class="event-summary__note">{{ site.data.conference.venue.name }}</span>
+    </a>
+  </div>
+  <div class="event-summary__item">
+    <span class="event-summary__label">Status</span>
+    <a class="event-summary__link" href="{{ '/cfp/' | relative_url }}">
+      <span class="event-summary__value">CFP coming soon</span>
+      <span class="event-summary__note">Deadlines and submission details TBA</span>
+    </a>
+  </div>
+</section>
