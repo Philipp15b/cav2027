@@ -3,8 +3,6 @@ layout: page
 title: Accepted Papers
 ---
 
-_Conditionally accepted papers will be added once their acceptance is confirmed._
-
 #### Research Papers
 
 * A Multi-Width Parametric Equivalence Solver<font size="2"><br>Luigi Rinaldi (University College London); John Wickerson (Imperial College London); Samuel Coward (University College London)</font>
@@ -77,9 +75,15 @@ _Conditionally accepted papers will be added once their acceptance is confirmed.
 
 * Precise Verification of Transformers through ReLU-Catalyzed Abstraction Refinement<font size="2"><br>Hengjie Liu, Zhenya Zhang, Jianjun Zhao (Kyushu University)</font>
 
+* QAV-FT: Quadratic Approximation-based Neural Network Verification via Fourier Series and Taylor Truncation<font size="2"><br>Han Wang, Xuyang Ding (School of Computer Science and Engineering, University of Electronic Science and Technology of China); Xie Ying (College of Computer Science and Artificial Intelligence, Southwest Minzu University); Yakun Sheng (School of Computer Science and Engineering, University of Electronic Science and Technology of China)</font>
+
 * Quantifying Sensitivity for Tree Ensembles : A symbolic and compositional approach<font size="2"><br>Ajinkya Naik, Akshay S, Ashutosh Gupta, Chaitanya Garg (IIT Bombay); Kuldeep S. Meel (University of Toronto)</font>
 
+* Quokka#: Quantum Computing with #SAT<font size="2"><br>Jingyi Mei (Leiden University); Dekel Zak (Delft University of Technology, Leiden University); Muhammad Osama (Leiden University); Tim Coopmans (Delft University of Technology); Alfons Laarman (Leiden University)</font>
+
 * Randomise Alone, Reach Together<font size="2"><br>Léonard Brice, Thomas A. Henzinger, Alipasha Montaseri, Ali Shafiee, K. S. Thejaswini (Institute of Science and Technology Austria)</font>
+
+* Repairing Regex-Dependent String-Manipulation Programs<font size="2"><br>Nariyoshi Chida (NTT Social Informatics Laboratories); Tachio Terauchi (Waseda University)</font>
 
 * SMT-Based Active Learning of Weighted Automata<font size="2"><br>Tiago Ferreira (University College London); Kevin Batz, Alexandra Silva (Cornell University)</font>
 
