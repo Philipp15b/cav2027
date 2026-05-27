@@ -12,6 +12,17 @@ roles:
         affiliation: RWTH Aachen University
         photo: /assets/img/organizers/joost-pieter-katoen.jpg
         photo_source: https://www-i2.moves.rwth-aachen.de/~katoen/newglasses.jpg
+  - title: Steering Committee
+    people:
+      - name: Orna Grumberg
+        url: https://orna.cswp.cs.technion.ac.il/
+        affiliation: Technion
+      - name: Aarti Gupta
+        url: https://www.cs.princeton.edu/~aartig/
+        affiliation: Princeton University
+      - name: Daniel Kröning
+        url: https://www.kroening.com/
+        affiliation: Amazon
   - title: Program Chairs
     people:
       - name: Thomas van Binsbergen

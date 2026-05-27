@@ -9,6 +9,7 @@ github:
 navbar-links:
   Authors:
     - Call for Papers: "/cfp/"
+    - Call for Workshops: "/cfw/"
     - Artifact Evaluation: "/artifacts/"
   Program:
     - Overview: "/program/"

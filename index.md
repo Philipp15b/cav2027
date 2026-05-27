@@ -15,28 +15,48 @@ cover-img: "/assets/img/kit-royal-tropical-institute.jpg"
 
 <section class="important-dates" aria-labelledby="important-dates-heading">
   <h2 id="important-dates-heading">Important Dates</h2>
-  <p>First actionable deadlines for authors and nominators. Deadlines will be AoE unless stated otherwise.</p>
+  <p>All deadlines are AoE (Anywhere on Earth).</p>
 
-  <dl>
-    <div>
-      <dt>Paper submission deadline</dt>
-      <dd>TBA</dd>
-    </div>
-    <div>
-      <dt>Artifact registration deadline</dt>
-      <dd>TBA</dd>
-    </div>
-    <div>
-      <dt>CAV Award nomination deadline</dt>
-      <dd>TBA</dd>
-    </div>
-  </dl>
+  <div class="important-dates__list">
+    <a class="important-dates__item" href="{{ '/cfw/' | relative_url }}">
+      <span class="important-dates__label">Workshop proposal deadline</span>
+      <span class="important-dates__value">
+        <span class="important-dates__date">Tuesday, 15 September 2026</span>
+        <span class="important-dates__note">Call coming up soon</span>
+      </span>
+    </a>
+    <a class="important-dates__item" href="{{ '/cfp/' | relative_url }}">
+      <span class="important-dates__label">Submission deadline</span>
+      <span class="important-dates__value">
+        <span class="important-dates__date">Wednesday, 20 January 2027</span>
+        <span class="important-dates__note">Call coming up soon</span>
+      </span>
+    </a>
+    <a class="important-dates__item" href="{{ '/cfp/' | relative_url }}">
+      <span class="important-dates__label">Notification</span>
+      <span class="important-dates__value">Friday, 23 April 2027</span>
+    </a>
+    <a class="important-dates__item" href="{{ '/venue/' | relative_url }}">
+      <span class="important-dates__label">Early registration deadline</span>
+      <span class="important-dates__value">Tuesday, 18 May 2027</span>
+    </a>
+  </div>
 </section>
 
 <nav class="quick-links" aria-label="Key pages">
   <a class="button-link" href="{{ '/cfp/' | relative_url }}">Call for Papers</a>
+  <a class="button-link" href="{{ '/cfw/' | relative_url }}">Call for Workshops</a>
   <a class="button-link" href="{{ '/program/' | relative_url }}">Program Overview</a>
   <a class="button-link" href="{{ '/organization/' | relative_url }}">Organization</a>
   <a class="button-link" href="{{ '/venue/' | relative_url }}">Venue</a>
   <a class="button-link" href="{{ '/artifacts/' | relative_url }}">Artifact Evaluation</a>
+</nav>
+
+<nav class="previous-conferences" aria-label="Previous CAV conferences">
+  <span>Previous editions:</span>
+  <a href="https://conferences.i-cav.org/2026/">CAV 2026</a>
+  <span aria-hidden="true">&middot;</span>
+  <a href="https://conferences.i-cav.org/2025/">CAV 2025</a>
+  <span aria-hidden="true">&middot;</span>
+  <span aria-label="More previous editions">...</span>
 </nav>
