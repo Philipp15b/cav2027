@@ -1,10 +1,12 @@
 title: CAV 2027
 author: International Conference on Computer Aided Verification
+url: "https://philipp15b.github.io"
+baseurl: "/cav2027"
 
 github:
-  repository_url: https://github.com/i-cav/2027
+  repository_url: https://github.com/Philipp15b/cav2027
   source:
-    branch: main
+    branch: master
 
 navbar-links:
   Authors:

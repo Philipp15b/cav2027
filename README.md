@@ -42,10 +42,10 @@ Public conference pages live under `pages/` and use explicit permalinks so URLs 
 
 ## Deployment
 
-The GitHub Actions workflow installs the Gemfile dependencies with Bundler and runs:
+The GitHub Actions workflow installs the Gemfile dependencies with Bundler and builds the GitHub Pages artifact with:
 
 ```sh
 bundle exec jekyll build --future --config _config.yml,_config_ci.yml
 ```
 
-The generated `_site/` directory is uploaded as a GitHub Pages artifact.
+On pushes to `master`, the generated `_site/` directory is uploaded and deployed to GitHub Pages.
