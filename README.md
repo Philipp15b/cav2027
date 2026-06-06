@@ -34,7 +34,7 @@ Conference metadata lives in `_data/conference.yml`.
 
 Organizer roles and chair links live in `_data/organizers.yml`; the organization page renders directly from that data.
 
-Public conference pages live under `pages/` and use explicit permalinks so URLs such as `/cfp/`, `/organization/`, `/legal-notice/`, and `/sponsors/` remain stable.
+Public conference pages live under `pages/` and use explicit permalinks so URLs such as `/cfp/`, `/organization/`, `/contact/`, and `/sponsors/` remain stable.
 
 ## Image credits
 

@@ -656,7 +656,7 @@ main li a {
 
 .important-dates__value {
   color: var(--text);
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .important-dates__date {
@@ -729,11 +729,44 @@ main li a {
    Shared Components
    ========================================================================== */
 
+.quick-link-directory {
+  margin: 2rem 0 0;
+}
+
+.quick-link-directory h2 {
+  margin: 0 0 0.9rem;
+}
+
+.quick-link-directory__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.35rem 1.75rem;
+}
+
+.quick-link-directory__group {
+  min-width: 0;
+}
+
+.quick-link-directory__group h3 {
+  margin: 0 0 0.65rem;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
 .quick-links {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.7rem;
   margin: 1.6rem 0 0;
+}
+
+.quick-link-directory .quick-links {
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+  margin: 0;
+}
+
+.quick-links--pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .button-link {
@@ -843,6 +876,30 @@ main li a {
   row-gap: 1.5rem;
 }
 
+.legal-provider {
+  margin: 1.5rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.legal-provider h2 {
+  margin: 0 0 0.75rem;
+  color: var(--brand);
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.legal-provider p {
+  margin: 0 0 0.5rem;
+}
+
+.legal-provider address {
+  margin: 0 0 1rem;
+  font-style: normal;
+  line-height: 1.55;
+}
+
 .organizer-featured {
   margin: 0 0 1.5rem;
   padding-bottom: 1.5rem;
@@ -894,8 +951,10 @@ main li a {
 
 .organizer-photo {
   width: 4.5rem;
+  aspect-ratio: 543 / 620;
   height: auto;
   display: block;
+  object-fit: cover;
   border-radius: 6px;
   background: var(--surface);
 }
@@ -968,9 +1027,13 @@ footer .list-inline-item {
 }
 
 footer .copyright {
-  margin: 0;
+  margin: 0.35rem 0 0;
   text-align: center;
   font-family: var(--header-font);
+}
+
+footer .copyright:first-of-type {
+  margin-top: 0;
 }
 
 .footer-links .fa-stack {
@@ -1122,6 +1185,10 @@ pre code {
     gap: 0.2rem;
   }
 
+  .quick-link-directory__grid {
+    grid-template-columns: 1fr;
+  }
+
   .quick-links {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1242,6 +1309,10 @@ pre code {
 
 @media (max-width: 520px) {
   .quick-links {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-link-directory .quick-links {
     grid-template-columns: 1fr;
   }
 }

@@ -1,9 +1,9 @@
-{% assign general_chairs = site.data.organizers.roles | where: "title", "General Chairs" | first %}
+{% assign general_chairs = site.data.organizers.roles | where: "featured", true | first %}
 {% assign website_chair = site.data.organizers.roles | where: "title", "Website Chair" | first %}
 
 <div class="organizer-grid">
   <section class="organizer-role">
-    <h2>Responsible for Conference Content</h2>
+    <h2>Conference Content</h2>
     <ul class="organizer-list">
     {% for person in general_chairs.people %}
       <li class="organizer-person">
@@ -19,7 +19,7 @@
   </section>
 
   <section class="organizer-role">
-    <h2>Responsible for Website Maintenance</h2>
+    <h2>Website Maintenance</h2>
     <ul class="organizer-list">
     {% for person in website_chair.people %}
       <li class="organizer-person">
@@ -34,3 +34,18 @@
     </ul>
   </section>
 </div>
+
+<p class="venue-note">The full CAV 2027 organization list is available on the <a href="{{ '/organization/' | relative_url }}">Organization</a> page.</p>
+
+<section class="legal-provider" aria-labelledby="legal-provider-heading">
+  <h2 id="legal-provider-heading">Legal Notice</h2>
+  <p>Formal provider address:</p>
+  <address>
+    <a href="https://moves.rwth-aachen.de/contact/">Lehrstuhl für Informatik 2</a><br>
+    RWTH Aachen University<br>
+    52056 Aachen<br>
+    Germany<br>
+    E-mail: <a href="mailto:moves@cs.rwth-aachen.de">moves@cs.rwth-aachen.de</a><br>
+    Phone: <a href="tel:+492418021201">+49 241 80 21201</a>
+  </address>
+</section>

@@ -13,6 +13,8 @@ cover-img: "/assets/img/kit-royal-tropical-institute.jpg"
 
 The venue is reachable by public transport from Amsterdam's main railway stations. The surrounding area has parks, museums, cafes, and restaurants within walking distance.
 
+For more on the host city and official visitor resources, see the [Amsterdam page]({{ "/amsterdam/" | relative_url }}).
+
 For background on the building and institute, see [Wikipedia]({{ site.data.conference.venue.wikipedia_url }}).
 
 <div class="callout">
@@ -21,6 +23,7 @@ For background on the building and institute, see [Wikipedia]({{ site.data.confe
 </div>
 
 <nav class="quick-links" aria-label="Venue links">
+  <a class="button-link" href="{{ "/amsterdam/" | relative_url }}">Amsterdam</a>
   <a class="button-link" href="{{ site.data.conference.venue.official_url }}">KIT Conferences and Events</a>
   <a class="button-link" href="{{ site.data.conference.venue.wikipedia_url }}">Wikipedia</a>
 </nav>

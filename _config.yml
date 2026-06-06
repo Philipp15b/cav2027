@@ -20,7 +20,9 @@ navbar-links:
     - Proceedings: "/proceedings/"
     - CAV Award: "/award/"
   Attend:
+    - Registration: "/registration/"
     - Venue: "/venue/"
+    - Amsterdam: "/amsterdam/"
     - Sponsors: "/sponsors/"
   Organization: "/organization/"
 
