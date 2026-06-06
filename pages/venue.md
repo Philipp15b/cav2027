@@ -7,21 +7,28 @@ share-description: CAV 2027 will be held at KIT Royal Tropical Institute in Amst
 cover-img: "/assets/img/kit-royal-tropical-institute.jpg"
 ---
 
+## KIT Royal Tropical Institute
+
 <div class="lead-copy">
-  <p>CAV 2027 will take place at <a href="{{ site.data.conference.venue.official_url }}">{{ site.data.conference.venue.name }}</a> in Amsterdam.</p>
-  <p>KIT is a historic conference venue beside Oosterpark, east of Amsterdam's city center. It should provide a practical setting for the talks, workshops, and informal conversations around the conference.</p>
+  <p>CAV 2027 will take place at <a href="{{ site.data.conference.venue.official_url }}">{{ site.data.conference.venue.name }}</a>, beside Oosterpark and east of Amsterdam's city center.</p>
+  <p>KIT is a historic conference venue beside one of Amsterdam's city parks, with museums, cafes, and restaurants in the surrounding area.</p>
 </div>
 
-The venue is reachable by public transport from Amsterdam's main railway stations. The surrounding area has parks, museums, cafes, and restaurants within walking distance.
-
-For more on the host city and official visitor resources, see the [Amsterdam page]({{ "/amsterdam/" | relative_url }}).
+The event venue address is Mauritskade 63, 1092 AD Amsterdam.
 
 For background on the building and institute, see [Wikipedia]({{ site.data.conference.venue.wikipedia_url }}).
 
-<div class="callout">
-  <span class="callout__label">Coming Soon</span>
-  <p>Travel notes, accessibility details, and local recommendations will be added as arrangements are finalized.</p>
-</div>
+## Reaching KIT
+
+For information about arriving in Amsterdam, major stations, and public-transport tickets, see the [Amsterdam page]({{ "/amsterdam/" | relative_url }}).
+
+From within Amsterdam, attendees can use the city's public-transport network to reach KIT. Attendees staying near Oosterpark may also be able to reach the venue on foot or by bicycle.
+
+Parking in inner Amsterdam is limited and can be expensive compared with public transport.
+
+## Around Oosterpark
+
+KIT Royal Tropical Institute is beside Oosterpark. The surrounding area includes parks, museums, cafes, and restaurants within walking distance.
 
 <nav class="quick-links" aria-label="Venue links">
   <a class="button-link" href="{{ "/amsterdam/" | relative_url }}">Amsterdam</a>
