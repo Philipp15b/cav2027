@@ -1,5 +1,5 @@
 roles:
-  - title: General Chairs
+  - title: General Chairs + PC Chairs
     featured: true
     people:
       - name: Marieke Huisman
@@ -11,7 +11,6 @@ roles:
         url: https://moves.rwth-aachen.de/people/katoen/
         affiliation: RWTH Aachen University
         photo: /assets/img/organizers/joost-pieter-katoen.jpg
-        photo_source: https://www-i2.moves.rwth-aachen.de/~katoen/newglasses.jpg
   - title: Steering Committee
     people:
       - name: Orna Grumberg
@@ -23,55 +22,71 @@ roles:
       - name: Daniel Kröning
         url: https://www.kroening.com/
         affiliation: Amazon
-  - title: Program Chairs
+      - name: Ken McMillan
+        url: https://www.cs.utexas.edu/people/faculty-researchers/ken-mcmillan
+        affiliation: University of Texas at Austin
+  - title: Local Chair
     people:
       - name: Thomas van Binsbergen
         url: https://ltvanbinsbergen.nl/
         affiliation: University of Amsterdam
-      - name: Tom van Dijk
-        url: https://www.tvandijk.nl/
-        affiliation: University of Twente
+  - title: Artifact Evaluation Chairs
+    people:
       - name: Tim Quatmann
         url: https://moves.rwth-aachen.de/people/quatmann/
         affiliation: RWTH Aachen University
-  - title: Artifact Evaluation Chairs
+      - name: Tom van Dijk
+        url: https://www.tvandijk.nl/
+        affiliation: University of Twente
+  - title: Workshop Chair
     people:
       - name: Sebastian Junges
         url: https://sjunges.github.io/
         affiliation: Radboud University
+  - title: Industry Day Chair
+    people:
       - name: Mariëlle Stoelinga
         url: https://research.utwente.nl/en/persons/mari%C3%ABlle-ia-stoelinga/
         affiliation: University of Twente
-  - title: Workshop Chairs
+  - title: Fundraising Chairs
     people:
-      - name: Georgiana Caltais
-        url: https://people.utwente.nl/g.g.c.caltais
-        affiliation: University of Twente
-      - name: Ernst Moritz Hahn
-        url: https://emhahn.de/
-        affiliation: University of Twente
-  - title: Tutorial Chairs
-    people:
-      - name: Arnd Hartmanns
-        url: https://arnd.hartmanns.name/
+      - name: Mariëlle Stoelinga
+        url: https://research.utwente.nl/en/persons/mari%C3%ABlle-ia-stoelinga/
         affiliation: University of Twente
       - name: Anton Wijs
         url: https://research.tue.nl/en/persons/anton-j-wijs/
         affiliation: Eindhoven University of Technology
-  - title: Publicity Chairs
+  - title: Publicity Chair
+    people:
+      - name: Georgiana Caltais
+        url: https://people.utwente.nl/g.g.c.caltais
+        affiliation: University of Twente
+  - title: Proceedings Chair
+    people:
+      - name: Ernst Moritz Hahn
+        url: https://emhahn.de/
+        affiliation: University of Twente
+  - title: Financial Chair
+    people:
+      - name: Arnd Hartmanns
+        url: https://arnd.hartmanns.name/
+        affiliation: University of Twente
+  - title: Volunteers Chair
+    people:
+      - name: Fernando Castor
+        url: https://fernandocastor.github.io/
+        affiliation: University of Twente
+  - title: Merchandising Chair
     people:
       - name: Milan Lopuhaä-Zwakenberg
         url: https://milanlopuhaazwakenberg.personalweb.utwente.nl/
-        affiliation: University of Twente
-      - name: Fernando Castor
-        url: https://fernandocastor.github.io/
         affiliation: University of Twente
   - title: Website Chair
     people:
       - name: Philipp Schröer
         url: https://moves.rwth-aachen.de/people/philipp-schroer/
         affiliation: RWTH Aachen University
-  - title: Mentoring Workshop Co-Chairs
+  - title: Mentoring Workshop Chairs
     people:
       - name: Mukund Raghothaman
         url: https://r-mukund.github.io/
