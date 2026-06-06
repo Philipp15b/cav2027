@@ -36,15 +36,24 @@ cover-img: "/assets/img/hero/windmill.jpg"
 
 <section class="program-overview" aria-labelledby="social-program-heading">
   <h2 id="social-program-heading">Social Program</h2>
-  <p>Social events are being planned. Details will be announced here.</p>
+  <p>Further social event details will be announced here as they become available.</p>
   <dl class="program-overview__list">
     <div>
       <dt>Reception</dt>
-      <dd>Tuesday, July 20 or Wednesday, July 21, 2027 (TBA)</dd>
+      <dd>Tuesday, July 20, 2027</dd>
     </div>
     <div>
       <dt>Banquet</dt>
-      <dd>TBA</dd>
+      <dd>Wednesday, July 21, 2027</dd>
     </div>
   </dl>
+</section>
+
+<section class="program-overview" aria-labelledby="program-details-heading">
+  <h2 id="program-details-heading">Program Details</h2>
+  <p>Keynote speaker information and accepted papers will be published on dedicated pages as they become available.</p>
+  <nav class="quick-links quick-links--pair" aria-label="Program pages">
+    <a class="button-link" href="{{ '/keynote/' | relative_url }}">Keynotes</a>
+    <a class="button-link" href="{{ '/accepted/' | relative_url }}">Accepted Papers</a>
+  </nav>
 </section>

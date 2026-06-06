@@ -22,5 +22,13 @@ All deadlines are AoE (Anywhere on Earth).
 | Item | Date |
 | --- | --- |
 | Submission deadline | Wednesday, 20 January 2027, 23:59 AoE |
+| Response period | Monday, 5 April 2027 &ndash; Thursday, 8 April 2027, 23:59 AoE |
 | Notification | Friday, 23 April 2027 |
 | Camera-ready deadline | TBA |
+
+## Related Calls
+
+<nav class="quick-links quick-links--pair" aria-label="Related calls">
+  <a class="button-link" href="{{ '/cfw/' | relative_url }}">Call for Workshops</a>
+  <a class="button-link" href="{{ '/artifacts/' | relative_url }}">Artifact Evaluation</a>
+</nav>
