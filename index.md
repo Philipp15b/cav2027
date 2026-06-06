@@ -18,29 +18,29 @@ cover-img: "/assets/img/kit-royal-tropical-institute.jpg"
   <p>All deadlines are AoE (Anywhere on Earth).</p>
 
   <div class="important-dates__list">
-    <a class="important-dates__item" href="{{ '/cfw/' | relative_url }}">
+    <a class="important-dates__item topic-authors" href="{{ '/cfw/' | relative_url }}">
       <span class="important-dates__label">Workshop proposal deadline</span>
       <span class="important-dates__value">
         <span class="important-dates__date">Tuesday, 15 September 2026</span>
         <span class="important-dates__note">Call coming up soon</span>
       </span>
     </a>
-    <a class="important-dates__item" href="{{ '/cfp/' | relative_url }}">
+    <a class="important-dates__item topic-authors" href="{{ '/cfp/' | relative_url }}">
       <span class="important-dates__label">Submission deadline</span>
       <span class="important-dates__value">
         <span class="important-dates__date">Wednesday, 20 January 2027</span>
         <span class="important-dates__note">Call coming up soon</span>
       </span>
     </a>
-    <a class="important-dates__item" href="{{ '/cfp/' | relative_url }}">
+    <a class="important-dates__item topic-authors" href="{{ '/cfp/' | relative_url }}">
       <span class="important-dates__label">Response period</span>
       <span class="important-dates__value">Monday, 5 April 2027 &ndash; Thursday, 8 April 2027</span>
     </a>
-    <a class="important-dates__item" href="{{ '/cfp/' | relative_url }}">
+    <a class="important-dates__item topic-authors" href="{{ '/cfp/' | relative_url }}">
       <span class="important-dates__label">Notification</span>
       <span class="important-dates__value">Friday, 23 April 2027</span>
     </a>
-    <a class="important-dates__item" href="{{ '/registration/' | relative_url }}">
+    <a class="important-dates__item topic-attend" href="{{ '/registration/' | relative_url }}">
       <span class="important-dates__label">Early registration deadline</span>
       <span class="important-dates__value">Tuesday, 18 May 2027</span>
     </a>
@@ -51,7 +51,7 @@ cover-img: "/assets/img/kit-royal-tropical-institute.jpg"
   <h2 id="quick-link-directory-heading">Quick Links</h2>
 
   <div class="quick-link-directory__grid">
-    <nav class="quick-link-directory__group" aria-labelledby="quick-links-authors">
+    <nav class="quick-link-directory__group topic-authors" aria-labelledby="quick-links-authors">
       <h3 id="quick-links-authors">Authors</h3>
       <div class="quick-links">
         <a class="button-link" href="{{ '/cfp/' | relative_url }}">Call for Papers</a>
@@ -60,7 +60,7 @@ cover-img: "/assets/img/kit-royal-tropical-institute.jpg"
       </div>
     </nav>
 
-    <nav class="quick-link-directory__group" aria-labelledby="quick-links-program">
+    <nav class="quick-link-directory__group topic-program" aria-labelledby="quick-links-program">
       <h3 id="quick-links-program">Program</h3>
       <div class="quick-links quick-links--pair">
         <a class="button-link" href="{{ '/program/' | relative_url }}">Program Overview</a>
@@ -68,7 +68,7 @@ cover-img: "/assets/img/kit-royal-tropical-institute.jpg"
       </div>
     </nav>
 
-    <nav class="quick-link-directory__group" aria-labelledby="quick-links-attend">
+    <nav class="quick-link-directory__group topic-attend" aria-labelledby="quick-links-attend">
       <h3 id="quick-links-attend">Attend</h3>
       <div class="quick-links">
         <a class="button-link" href="{{ '/registration/' | relative_url }}">Registration</a>
@@ -77,7 +77,7 @@ cover-img: "/assets/img/kit-royal-tropical-institute.jpg"
       </div>
     </nav>
 
-    <nav class="quick-link-directory__group" aria-labelledby="quick-links-organization">
+    <nav class="quick-link-directory__group topic-organization" aria-labelledby="quick-links-organization">
       <h3 id="quick-links-organization">Organization</h3>
       <div class="quick-links">
         <a class="button-link" href="{{ '/organization/' | relative_url }}">Committee</a>

@@ -2,6 +2,7 @@
 layout: page
 title: Call for Papers
 permalink: /cfp/
+topic: authors
 cover-img: "/assets/img/hero/amsterdam-canal.jpg"
 ---
 

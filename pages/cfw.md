@@ -2,6 +2,7 @@
 layout: page
 title: Call for Workshops
 permalink: /cfw/
+topic: authors
 cover-img: "/assets/img/hero/tulips.jpg"
 ---
 

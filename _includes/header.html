@@ -1,4 +1,4 @@
-<header class="header-section {% if page.cover-img %}has-img{% endif %}">
+<header class="header-section {% if page.cover-img %}has-img{% endif %}{% if page.topic %} topic-{{ page.topic }}{% endif %}">
 <div class="intro-header{% if page.cover-img %} big-img{% endif %}{% if page.url == '/' %} home-hero{% endif %}{% if page.cover-img and page.url != '/' and page.url != '/venue/' %} decorative-hero{% endif %}"{% if page.cover-img %} style="background-image: url('{{ page.cover-img | relative_url }}');"{% endif %}>
   {% if page.cover-img or page.title %}
   <div class="container-md">

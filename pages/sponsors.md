@@ -2,6 +2,7 @@
 layout: page
 title: Sponsors
 permalink: /sponsors/
+topic: attend
 cover-img: "/assets/img/hero/gouda.jpg"
 ---
 

@@ -2,6 +2,7 @@
 layout: page
 title: Program Overview
 permalink: /program/
+topic: program
 share-description: CAV 2027 program overview.
 cover-img: "/assets/img/hero/windmill.jpg"
 ---

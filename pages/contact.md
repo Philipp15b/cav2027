@@ -2,6 +2,7 @@
 layout: page
 title: Contact
 permalink: /contact/
+topic: organization
 share-description: Contact information and legal notice for the CAV 2027 website.
 ---
 

@@ -2,6 +2,7 @@
 layout: page
 title: Registration
 permalink: /registration/
+topic: attend
 share-description: CAV 2027 registration information.
 cover-img: "/assets/img/hero/amsterdam-canal.jpg"
 ---

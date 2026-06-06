@@ -2,6 +2,7 @@
 layout: page
 title: Artifact Evaluation
 permalink: /artifacts/
+topic: authors
 cover-img: "/assets/img/hero/clogs.jpg"
 ---
 

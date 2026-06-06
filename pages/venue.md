@@ -2,6 +2,7 @@
 layout: page
 title: Venue
 permalink: /venue/
+topic: attend
 share-description: CAV 2027 will be held at KIT Royal Tropical Institute in Amsterdam.
 cover-img: "/assets/img/kit-royal-tropical-institute.jpg"
 ---
