@@ -1,5 +1,38 @@
 <header class="header-section {% if page.cover-img %}has-img{% endif %}{% if page.topic %} topic-{{ page.topic }}{% endif %}">
-<div class="intro-header{% if page.cover-img %} big-img{% endif %}{% if page.url == '/' %} home-hero{% endif %}{% if page.cover-img and page.url != '/' and page.url != '/venue/' %} decorative-hero{% endif %}"{% if page.cover-img %} style="background-image: url('{{ page.cover-img | relative_url }}');"{% endif %}>
+{% if page.url == '/' %}
+{% assign hero_date_parts = site.data.conference.dates.conference | split: ', ' %}
+{% assign hero_month_days = hero_date_parts[0] %}
+{% assign hero_date_tokens = hero_month_days | split: ' ' %}
+{% assign hero_month = hero_date_tokens[0] %}
+{% assign hero_days = hero_date_tokens[1] %}
+<div class="intro-header home-hero{% if page.cover-img %} home-hero--with-media{% endif %}">
+  <div class="home-hero__card">
+    <div class="home-hero__content">
+      <h1>{% if page.title %}{{ page.title | strip_html }}{% else %}{{ site.data.conference.name }}{% endif %}</h1>
+      {% if page.subtitle %}
+        <p class="home-hero__subtitle">{{ page.subtitle | strip_html | replace: ' on Computer-Aided Verification', ' on<br>Computer-Aided Verification' }}</p>
+      {% endif %}
+      <p class="home-hero__copy">The flagship conference dedicated to advancing the theory and practice of computer-aided formal analysis methods for hardware and software systems.</p>
+      <div class="home-hero__dateline" aria-label="Conference date and location">
+        <a class="home-hero__date" href="{{ '/program/' | relative_url }}">
+          <span class="home-hero__date-month">{{ hero_month }}</span>
+          <span class="home-hero__date-days">{{ hero_days }}</span>
+        </a>
+        <a class="home-hero__place" href="{{ '/venue/' | relative_url }}">
+          <span class="home-hero__place-city">{{ site.data.conference.venue.city }}</span>
+          <span class="home-hero__place-detail">{{ site.data.conference.venue.country }} · {{ site.data.conference.venue.name }}</span>
+        </a>
+      </div>
+    </div>
+    {% if page.cover-img %}
+      <div class="home-hero__media" aria-hidden="true">
+        <img src="{{ page.cover-img | relative_url }}" alt="" decoding="async" fetchpriority="high">
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% else %}
+<div class="intro-header{% if page.cover-img %} big-img{% endif %}{% if page.url == '/' %} home-hero{% endif %}{% if page.cover-img and page.url != '/' %} decorative-hero{% endif %}"{% if page.cover-img %} style="background-image: url('{{ page.cover-img | relative_url }}');"{% endif %}>
   {% if page.cover-img or page.title %}
   <div class="container-md">
     <div class="row">
@@ -16,5 +49,6 @@
   </div>
   {% endif %}
 </div>
+{% endif %}
 
 </header>

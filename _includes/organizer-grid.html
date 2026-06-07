@@ -7,7 +7,7 @@
     {% for person in role.people %}
       <li class="organizer-person organizer-person--photo">
         {% if person.photo %}
-          <img class="organizer-photo" src="{{ person.photo | relative_url }}" alt="" width="72" height="82" loading="lazy">
+          <img class="organizer-photo" src="{{ person.photo | relative_url }}" alt="" width="72" height="82" loading="eager" decoding="async">
         {% endif %}
         <span class="organizer-person__details">
           {% if person.url %}

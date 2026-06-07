@@ -3,13 +3,13 @@ layout: base
 ---
 
 {% assign decorative_hero = false %}
-{% if page.cover-img and page.url != '/' and page.url != '/venue/' %}
+{% if page.cover-img and page.url != '/' %}
   {% assign decorative_hero = true %}
 {% endif %}
 
 {% include header.html %}
 
-<main id="main-content" class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}{% if page.topic %} topic-{{ page.topic }}{% endif %}{% if decorative_hero %} decorative-hero-main{% endif %}">
+<main id="main-content" class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}{% if page.topic %} topic-{{ page.topic }}{% endif %}{% if decorative_hero %} decorative-hero-main{% endif %}{% if page.url == '/' %} home-main{% endif %}">
   <div class="row">
     <div class="{% if page.full-width %} col {% else %} col-12 col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
       <div class="page-content-card">
