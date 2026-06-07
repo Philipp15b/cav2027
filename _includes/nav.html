@@ -21,7 +21,7 @@
               {%- endfor -%}
             {%- endfor -%}
             <li class="nav-item dropdown{% if child_active %} active{% endif %}">
-              <a class="nav-link dropdown-toggle{% if child_active %} active{% endif %}" href="#" id="{{ dropdown_id }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ link[0] }}</a>
+              <a class="nav-link dropdown-toggle{% if child_active %} active{% endif %}" href="#" id="{{ dropdown_id }}" role="button" data-bs-toggle="dropdown" data-turbo="false" aria-expanded="false">{{ link[0] }}</a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="{{ dropdown_id }}">
                 {%- for childlink in link[1] -%}
                   {%- for linkparts in childlink %}

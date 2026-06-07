@@ -48,6 +48,8 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#F5F7F8" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#123247" media="(prefers-color-scheme: dark)">
+  {% assign turbo_root = site.baseurl | default: '' | append: '/' | replace: '//', '/' %}
+  <meta name="turbo-root" content="{{ turbo_root }}">
 
   {% if page.cover-img %}
     <link rel="preload" as="image" href="{{ page.cover-img | relative_url }}" fetchpriority="high">
@@ -59,6 +61,12 @@
 
   {% for css in layout.common-css %}
     <link rel="stylesheet" href="{{ css | relative_url }}">
+  {% endfor %}
+
+  <script defer src="{{ '/assets/js/browser-support.js' | relative_url }}"></script>
+
+  {% for js in layout.common-head-js %}
+    <script type="module" src="{{ js | relative_url }}" data-turbo-track="reload"></script>
   {% endfor %}
 
   <meta property="og:site_name" content="{{ site.title }}">

@@ -1,18 +1,22 @@
-const Site = {
-  init() {
-    this.initHeaderParallax();
-    this.initDeadlinePopovers();
-    this.initTooltips();
-  },
+// Modules expose init() and, when Turbo snapshots need cleanup, cleanup().
+// Site wires those module hooks into the initial page load and Turbo visits.
+const HeaderParallax = {
+  state: null,
 
-  initHeaderParallax() {
+  init() {
+    // Turbo can re-enter a page from cache, so replace any old listeners before wiring new ones.
+    this.cleanup();
+
     // Shift hero image backgrounds only while visible; requestAnimationFrame keeps scroll work bounded.
     const headers = Array.from(document.querySelectorAll(".intro-header.big-img"));
     if (!headers.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
+    let active = true;
     let ticking = false;
 
     const update = () => {
+      if (!active) return;
+
       const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
 
       headers.forEach((header) => {
@@ -37,16 +41,47 @@ const Site = {
     update();
     window.addEventListener("scroll", requestUpdate, { passive: true });
     window.addEventListener("resize", requestUpdate);
+
+    this.state = {
+      headers,
+      stop() {
+        active = false;
+        window.removeEventListener("scroll", requestUpdate);
+        window.removeEventListener("resize", requestUpdate);
+      }
+    };
   },
 
-  initTooltips() {
+  cleanup() {
+    if (!this.state) return;
+
+    this.state.stop();
+    this.state.headers.forEach((header) => {
+      header.style.backgroundPosition = "";
+    });
+    this.state = null;
+  }
+};
+
+const BootstrapTooltips = {
+  init() {
     if (!window.bootstrap) return;
     document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((trigger) => {
       window.bootstrap.Tooltip.getOrCreateInstance(trigger);
     });
   },
 
-  initDeadlinePopovers() {
+  cleanup() {
+    if (!window.bootstrap) return;
+    // Bootstrap appends transient DOM; dispose it before Turbo stores the page snapshot.
+    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((trigger) => {
+      window.bootstrap.Tooltip.getInstance(trigger)?.dispose();
+    });
+  }
+};
+
+const DeadlinePopovers = {
+  init() {
     // AoE deadline controls keep the canonical UTC instant in markup; the popover formats it locally.
     const triggers = Array.from(document.querySelectorAll("[data-local-deadline]"));
     if (!triggers.length || !window.bootstrap) return;
@@ -83,7 +118,33 @@ const Site = {
         trigger: "hover click"
       });
     });
+  },
+
+  cleanup() {
+    if (!window.bootstrap) return;
+    // Avoid caching open popovers or stale Bootstrap instances across Turbo visits.
+    document.querySelectorAll("[data-local-deadline]").forEach((trigger) => {
+      window.bootstrap.Popover.getInstance(trigger)?.dispose();
+    });
+  }
+};
+
+const Site = {
+  modules: [
+    HeaderParallax,
+    DeadlinePopovers,
+    BootstrapTooltips
+  ],
+
+  init() {
+    this.modules.forEach((module) => module.init());
+  },
+
+  cleanup() {
+    this.modules.forEach((module) => module.cleanup?.());
   }
 };
 
 document.addEventListener("DOMContentLoaded", () => Site.init());
+document.addEventListener("turbo:load", () => Site.init());
+document.addEventListener("turbo:before-cache", () => Site.cleanup());
