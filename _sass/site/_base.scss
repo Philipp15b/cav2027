@@ -71,6 +71,18 @@ p {
   margin: var(--space-6) 0;
 }
 
+.page-content-card > p,
+.lead-copy p {
+  hyphenate-limit-chars: 12 5 5;
+  hyphens: auto;
+  overflow-wrap: normal;
+  text-align: justify;
+  text-align-last: start;
+  text-justify: auto;
+  text-wrap: pretty;
+  word-break: normal;
+}
+
 h1,
 h2,
 h3,
