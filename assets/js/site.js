@@ -1,11 +1,12 @@
 const Site = {
   init() {
     this.initHeaderParallax();
-    this.initLocalDeadlines();
+    this.initDeadlinePopovers();
     this.initTooltips();
   },
 
   initHeaderParallax() {
+    // Shift hero image backgrounds only while visible; requestAnimationFrame keeps scroll work bounded.
     const headers = Array.from(document.querySelectorAll(".intro-header.big-img"));
     if (!headers.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
@@ -18,6 +19,7 @@ const Site = {
         const rect = header.getBoundingClientRect();
         if (rect.bottom < 0 || rect.top > viewportHeight) return;
 
+        // Decorative page heroes are shorter, so they get a lighter background shift.
         const strength = header.classList.contains("decorative-hero") ? -0.05 : -0.08;
         const offset = Math.round(rect.top * strength);
         const basePosition = header.classList.contains("decorative-hero") ? "46%" : "50%";
@@ -44,19 +46,19 @@ const Site = {
     });
   },
 
-  initLocalDeadlines() {
-    document.querySelectorAll("[data-local-deadline]").forEach((deadlineBar) => {
-      const value = deadlineBar.querySelector(".deadline-local__value");
-      const note = deadlineBar.querySelector(".deadline-local__note");
-      const deadlineUtc = deadlineBar.getAttribute("data-deadline-utc");
-      const originalDeadline = deadlineBar.getAttribute("data-original-deadline");
-      if (!value || !deadlineUtc) return;
+  initDeadlinePopovers() {
+    // AoE deadline controls keep the canonical UTC instant in markup; the popover formats it locally.
+    const triggers = Array.from(document.querySelectorAll("[data-local-deadline]"));
+    if (!triggers.length || !window.bootstrap) return;
+
+    triggers.forEach((trigger) => {
+      const deadlineUtc = trigger.getAttribute("data-deadline-utc");
+      const originalDeadline = trigger.getAttribute("data-original-deadline") || trigger.textContent.trim();
+      if (!deadlineUtc) return;
 
       const deadline = new Date(deadlineUtc);
       if (Number.isNaN(deadline.getTime())) return;
 
-      const locale = navigator.language;
-      const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
       const formatter = new Intl.DateTimeFormat(undefined, {
         weekday: "long",
         year: "numeric",
@@ -66,13 +68,20 @@ const Site = {
         minute: "2-digit",
         timeZoneName: "short"
       });
+      const localDeadline = formatter.format(deadline);
 
-      value.textContent = formatter.format(deadline);
-      if (note && originalDeadline) {
-        const localeText = locale ? `browser locale ${locale}` : "your browser locale";
-        const zoneText = timeZone ? `browser time zone ${timeZone}` : "your browser time zone";
-        note.textContent = `Original deadline: ${originalDeadline} (UTC-12). Shown using ${localeText} and ${zoneText}.`;
-      }
+      // Keep the local deadline available to assistive tech without requiring the popover to open.
+      trigger.setAttribute("aria-label", `${originalDeadline}. Your local time: ${localDeadline}.`);
+
+      window.bootstrap.Popover.getOrCreateInstance(trigger, {
+        container: "body",
+        content: localDeadline,
+        customClass: "deadline-date-popover",
+        placement: "top",
+        title: "Your local time",
+        // Hover covers desktop discovery; click covers pinned and touch interaction.
+        trigger: "hover click"
+      });
     });
   }
 };
