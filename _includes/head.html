@@ -46,8 +46,16 @@
   <meta name="author" content="{{ site.author | strip_html }}">
   <meta name="description" content="{{ description }}">
   <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#f7f8f5" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0f1715" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F5F7F8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#123247" media="(prefers-color-scheme: dark)">
+
+  {% if page.cover-img %}
+    <link rel="preload" as="image" href="{{ page.cover-img | relative_url }}" fetchpriority="high">
+  {% endif %}
+
+  <link rel="preload" href="{{ '/assets/fonts/public-sans/PublicSans-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/public-sans/PublicSans-ExtraBold.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/source-serif-4/SourceSerif4-Regular.otf.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 
   {% for css in layout.common-css %}
     <link rel="stylesheet" href="{{ css | relative_url }}">

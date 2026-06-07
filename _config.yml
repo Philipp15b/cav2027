@@ -1,5 +1,5 @@
 title: CAV 2027
-author: International Conference on Computer Aided Verification
+author: International Conference on Computer-Aided Verification
 url: "https://philipp15b.github.io"
 baseurl: "/cav2027"
 
@@ -25,11 +25,6 @@ navbar-links:
     - Amsterdam: "/amsterdam/"
     - Sponsors: "/sponsors/"
   Organization: "/organization/"
-
-social-network-links:
-  facebook: groups/cavconference
-  twitter: confCAV
-  bluesky: confcav.bsky.social
 
 title-on-all-pages: true
 edit_page_button: true
