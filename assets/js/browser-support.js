@@ -1,7 +1,7 @@
 (function () {
   var supportsCss = window.CSS && CSS.supports &&
-    CSS.supports("color", "rgb(from red r g b / 1)") &&
-    CSS.supports("color", "color-mix(in srgb, red, white)");
+    CSS.supports("display", "flex") &&
+    CSS.supports("display", "grid");
   var supportsModules = "noModule" in document.createElement("script");
   var requiredApis = [
     "fetch",
@@ -17,6 +17,6 @@
   }
 
   if (!(supportsCss && supportsModules && supportsApis)) {
-    document.documentElement.className += " site-browser-warning";
+    document.documentElement.classList.add("site-browser-warning");
   }
 }());

@@ -28,7 +28,7 @@
   border-left: 0;
   border-radius: 0;
   background:
-    linear-gradient(90deg, var(--bg) 0%, var(--bg) 42%, rgb(from var(--bg) r g b / 0.86) 58%, rgb(from var(--bg) r g b / 0.18) 80%, rgb(from var(--bg) r g b / 0.04) 100%),
+    linear-gradient(90deg, var(--bg) 0%, var(--bg) 42%, rgba(var(--bg-rgb), 0.86) 58%, rgba(var(--bg-rgb), 0.18) 80%, rgba(var(--bg-rgb), 0.04) 100%),
     var(--surface-soft);
   box-shadow: none;
 }
@@ -39,9 +39,9 @@
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(112deg, transparent 0%, transparent 61%, rgb(from var(--accent) r g b / 0.08) 61.2%, transparent 61.6%),
-    repeating-linear-gradient(90deg, transparent 0, transparent var(--home-hero-grid-size), rgb(from var(--brand-2) r g b / 0.055) var(--home-hero-grid-size), rgb(from var(--brand-2) r g b / 0.055) calc(var(--home-hero-grid-size) + 1px)),
-    repeating-linear-gradient(0deg, transparent 0, transparent var(--home-hero-grid-size), rgb(from var(--accent) r g b / 0.025) var(--home-hero-grid-size), rgb(from var(--accent) r g b / 0.025) calc(var(--home-hero-grid-size) + 1px));
+    linear-gradient(112deg, transparent 0%, transparent 61%, rgba(var(--accent-rgb), 0.08) 61.2%, transparent 61.6%),
+    repeating-linear-gradient(90deg, transparent 0, transparent var(--home-hero-grid-size), rgba(var(--brand-2-rgb), 0.055) var(--home-hero-grid-size), rgba(var(--brand-2-rgb), 0.055) calc(var(--home-hero-grid-size) + 1px)),
+    repeating-linear-gradient(0deg, transparent 0, transparent var(--home-hero-grid-size), rgba(var(--accent-rgb), 0.025) var(--home-hero-grid-size), rgba(var(--accent-rgb), 0.025) calc(var(--home-hero-grid-size) + 1px));
   mix-blend-mode: multiply;
   pointer-events: none;
 }
@@ -53,7 +53,7 @@
   right: 0;
   left: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--brand) 0%, var(--brand-2) 58%, var(--accent) 82%, rgb(from var(--accent) r g b / 0) 100%);
+  background: linear-gradient(90deg, var(--brand) 0%, var(--brand-2) 58%, var(--accent) 82%, rgba(var(--accent-rgb), 0) 100%);
   pointer-events: none;
 }
 
@@ -62,7 +62,7 @@
   z-index: 3;
   max-width: var(--home-hero-content-max);
   padding: clamp(var(--space-8), 5vw, 4.5rem) clamp(var(--space-7), 4vw, 3.75rem) clamp(var(--space-8), 5vw, 4.5rem) max(var(--page-gutter), calc((100vw - var(--container-max)) / 2 + var(--page-gutter)));
-  background: linear-gradient(90deg, rgb(from var(--bg) r g b / 0.98) 0%, rgb(from var(--bg) r g b / 0.94) 76%, rgb(from var(--bg) r g b / 0) 100%);
+  background: linear-gradient(90deg, rgba(var(--bg-rgb), 0.98) 0%, rgba(var(--bg-rgb), 0.94) 76%, rgba(var(--bg-rgb), 0) 100%);
 }
 
 .home-hero__content::before {
@@ -208,7 +208,7 @@
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(90deg, var(--bg) 0%, rgb(from var(--bg) r g b / 0.82) 14%, rgb(from var(--bg) r g b / 0.28) 40%, rgb(from var(--bg) r g b / 0) 68%),
+    linear-gradient(90deg, var(--bg) 0%, rgba(var(--bg-rgb), 0.82) 14%, rgba(var(--bg-rgb), 0.28) 40%, rgba(var(--bg-rgb), 0) 68%),
     var(--image-tone-overlay);
   pointer-events: none;
 }
@@ -250,7 +250,7 @@
 
   .home-hero__media::before {
     background:
-      linear-gradient(0deg, var(--bg) 0%, rgb(from var(--bg) r g b / 0.22) 72%),
+      linear-gradient(0deg, var(--bg) 0%, rgba(var(--bg-rgb), 0.22) 72%),
       var(--image-tone-overlay);
   }
 

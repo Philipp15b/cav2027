@@ -52,7 +52,7 @@
   inset: 0;
   z-index: 0;
   background:
-    linear-gradient(90deg, rgb(from var(--bg) r g b / 0.98) 0%, rgb(from var(--bg) r g b / 0.92) 38%, rgb(from var(--bg) r g b / 0.56) 58%, rgb(from var(--bg) r g b / 0.08) 100%),
+    linear-gradient(90deg, rgba(var(--bg-rgb), 0.98) 0%, rgba(var(--bg-rgb), 0.92) 38%, rgba(var(--bg-rgb), 0.56) 58%, rgba(var(--bg-rgb), 0.08) 100%),
     var(--image-tone-overlay);
 }
 
@@ -124,7 +124,7 @@
 .intro-header.big-img.decorative-hero::before {
   z-index: 0;
   background:
-    linear-gradient(90deg, rgb(from var(--bg) r g b / 0.97) 0%, rgb(from var(--bg) r g b / 0.84) 32%, rgb(from var(--bg) r g b / 0.44) 58%, rgb(from var(--bg) r g b / 0.06) 82%),
+    linear-gradient(90deg, rgba(var(--bg-rgb), 0.97) 0%, rgba(var(--bg-rgb), 0.84) 32%, rgba(var(--bg-rgb), 0.44) 58%, rgba(var(--bg-rgb), 0.06) 82%),
     var(--image-tone-overlay);
 }
 

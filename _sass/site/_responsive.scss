@@ -154,7 +154,7 @@
 
   .intro-header.big-img::before {
     background:
-      linear-gradient(90deg, rgb(from var(--bg) r g b / 0.97) 0%, rgb(from var(--bg) r g b / 0.82) 45%, rgb(from var(--bg) r g b / 0.36) 72%, rgb(from var(--bg) r g b / 0.08) 100%),
+      linear-gradient(90deg, rgba(var(--bg-rgb), 0.97) 0%, rgba(var(--bg-rgb), 0.82) 45%, rgba(var(--bg-rgb), 0.36) 72%, rgba(var(--bg-rgb), 0.08) 100%),
       var(--image-tone-overlay);
   }
 
