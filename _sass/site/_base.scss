@@ -1,0 +1,210 @@
+@use "mixins" as *;
+
+/* ==========================================================================
+   Base Layout
+   ========================================================================== */
+
+html {
+  font-size: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: break-word;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body-font);
+  font-size: var(--font-size-body);
+  line-height: var(--line-base);
+}
+
+body > main {
+  flex: 1;
+}
+
+main.container-md {
+  max-width: var(--container-max);
+}
+
+main.container-md > .row {
+  justify-content: center;
+}
+
+main.container-md > .row > div {
+  width: 100%;
+  max-width: var(--content-max);
+  flex: 0 0 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.page-content-card {
+  padding: var(--space-7);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+}
+
+.page-content-card > :first-child {
+  margin-top: 0;
+}
+
+.page-content-card > h2:first-child,
+.page-content-card > h3:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.page-content-card > :last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Typography and Prose
+   ========================================================================== */
+
+p {
+  @include prose-text;
+  margin: var(--space-6) 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1.25rem;
+  color: var(--brand);
+  font-family: var(--header-font);
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: var(--line-tight);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  margin-top: var(--space-7);
+  font-size: var(--font-size-h2);
+}
+
+h2::after {
+  content: "";
+  width: 3rem;
+  height: 2px;
+  display: block;
+  margin-top: var(--space-2);
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+a {
+  color: var(--brand-link);
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-dark);
+}
+
+img {
+  max-width: 100%;
+}
+
+blockquote {
+  padding-left: var(--space-4);
+  border-left: var(--edge-width) solid var(--accent);
+  color: var(--muted);
+  font-family: var(--prose-font);
+  font-style: italic;
+}
+
+blockquote p:first-child {
+  margin-top: 0;
+}
+
+hr.small {
+  max-width: 5.5rem;
+  margin: var(--space-4) auto;
+  border-width: 0.22rem;
+  border-color: inherit;
+  border-radius: var(--radius-tight);
+}
+
+/* ==========================================================================
+   Accessibility and Focus States
+   ========================================================================== */
+
+::selection {
+  color: var(--surface);
+  background: var(--brand-link);
+  text-shadow: none;
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: var(--anchor-offset);
+  margin: calc(-1 * var(--anchor-offset)) 0 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 2000;
+  padding: var(--space-3) var(--space-4);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--brand);
+  font-family: var(--header-font);
+  font-weight: 800;
+  transform: translateY(-150%);
+  transition: transform 0.15s ease-in-out;
+}
+
+.skip-link:focus {
+  color: var(--brand);
+  @include focus-ring(2px);
+  transform: translateY(0);
+}
+
+a:focus-visible,
+button:focus-visible,
+.navbar-toggler:focus-visible {
+  @include focus-ring;
+}
+
+main p a,
+main li a {
+  @include inline-underline;
+}
+
+/* Component links that should behave like controls, not inline prose. */
+.button-link,
+.button-link:hover,
+.button-link:focus,
+.homepage-cta__item,
+.homepage-cta__item:hover,
+.homepage-cta__item:focus,
+.navbar-custom a,
+.navbar-custom a:hover,
+.navbar-custom a:focus {
+  text-decoration: none;
+}

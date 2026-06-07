@@ -1,0 +1,144 @@
+@use "mixins" as *;
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.navbar-custom {
+  min-height: var(--nav-height);
+  padding: 0;
+  border-bottom: 2px solid var(--brand);
+  background: var(--navbar-bg);
+  box-shadow: var(--navbar-shadow);
+  font-family: var(--header-font);
+}
+
+.navbar-custom > .container-xl {
+  min-height: var(--nav-height);
+  padding-right: var(--page-gutter);
+  padding-left: var(--page-gutter);
+}
+
+.navbar-custom .navbar-brand {
+  margin-right: var(--space-5);
+  color: var(--brand);
+  font-size: var(--font-size-lead);
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+  color: var(--brand-link);
+}
+
+.navbar-custom .navbar-nav {
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.navbar-custom .nav-item {
+  font-size: var(--font-size-ui);
+}
+
+.navbar-custom .nav-link {
+  padding: var(--space-3);
+  border: 0;
+  border-radius: 0;
+  box-shadow: inset 0 -3px 0 transparent;
+  color: var(--brand);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link:focus {
+  background: transparent;
+  box-shadow: inset 0 -3px 0 var(--accent);
+  color: var(--brand-link-dark);
+}
+
+.navbar-custom .nav-link.active,
+.navbar-custom .nav-item.active > .nav-link,
+.navbar-custom .dropdown-toggle.show {
+  background: transparent;
+  box-shadow: inset 0 -3px 0 var(--accent);
+  color: var(--brand);
+  text-decoration: none;
+}
+
+.navbar-custom .navbar-toggler {
+  margin-left: auto;
+  padding: var(--space-2) var(--space-3);
+  border: var(--border);
+  border-radius: var(--radius);
+  color: var(--brand);
+  font-size: 1rem;
+}
+
+.navbar-custom .navbar-toggler-icon {
+  width: 1.35em;
+  height: 1em;
+  background-image:
+    linear-gradient(currentColor, currentColor),
+    linear-gradient(currentColor, currentColor),
+    linear-gradient(currentColor, currentColor);
+  background-position: top, center, bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+}
+
+.navbar-custom .navbar-toggler:hover,
+.navbar-custom .navbar-toggler:focus,
+.navbar-custom .navbar-toggler[aria-expanded="true"] {
+  background: var(--surface-soft);
+  color: var(--brand-link-dark);
+}
+
+.navbar-custom .dropdown-toggle::after {
+  margin-left: var(--space-1);
+  vertical-align: 0.12em;
+}
+
+.navbar-custom .dropdown-menu {
+  min-width: 13.5rem;
+  margin-top: var(--space-2);
+  padding: var(--space-2);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-menu);
+  font-size: var(--font-size-ui);
+  text-align: left;
+  word-break: normal;
+}
+
+.navbar-custom .dropdown-item {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 0;
+  border-radius: var(--radius-tight);
+  background: transparent;
+  color: var(--text);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.navbar-custom .dropdown-item:last-child {
+  border-bottom: 0;
+}
+
+.navbar-custom .dropdown-item:hover,
+.navbar-custom .dropdown-item:focus {
+  background: var(--surface-soft);
+  color: var(--brand-link-dark);
+}
+
+.navbar-custom .dropdown-item.active {
+  background: var(--surface-soft);
+  color: var(--brand);
+  font-weight: 800;
+}
+
+.navbar-custom .dropdown-item:focus-visible {
+  @include focus-ring(2px);
+}

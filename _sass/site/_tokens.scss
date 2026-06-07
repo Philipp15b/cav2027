@@ -1,0 +1,116 @@
+/* ==========================================================================
+   Design Tokens
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* Color system */
+  --bg: #F5F7F8;
+  --surface: white;
+  --surface-soft: color-mix(in srgb, var(--brand-2) 7.2%, var(--surface));
+  --surface-muted: #DDE6EA;
+  --text: #15262E;
+  --text-soft: #34454E;
+  --muted: #63727A;
+  --rule: #CBD6DC;
+  --rule-strong: #9DAEB8;
+  --brand: #123247;
+  --brand-2: #0D5C73;
+  --brand-link: #006D80;
+  --brand-link-dark: #004E5D;
+  --accent: #E8752A;
+  --accent-strong: #C7501F;
+  --accent-hover: #A9421E;
+  --accent-dark: var(--brand-link-dark);
+  --accent-warm: #FBE7D7;
+  --accent-wash: var(--surface-soft);
+  --hero-text: var(--surface);
+  --hero-page-fade: rgb(from var(--surface) r g b / 0.96);
+  --footer-bg: var(--brand);
+  --footer-text: var(--bg);
+  --code-bg: var(--surface-soft);
+  --code-text: var(--brand-2);
+  --navbar-bg: var(--surface);
+  --navbar-shadow: 0 1px 18px rgb(from var(--brand) r g b / 0.08);
+  --footer-icon-bg: rgb(from var(--surface) r g b / 0.16);
+  --callout-border: var(--accent-strong);
+  --image-tone-overlay: linear-gradient(0deg, rgb(from var(--accent) r g b / 0.035), rgb(from var(--brand) r g b / 0.055));
+  --shadow: 0 18px 45px rgb(from var(--brand) r g b / 0.12);
+  --shadow-soft: 0 8px 24px rgb(from var(--brand) r g b / 0.08);
+  --shadow-menu: 0 14px 34px rgb(from var(--brand) r g b / 0.15);
+
+  /* Layout and spacing scale */
+  --container-max: 70rem;
+  --content-max: 57.5rem;
+  --nav-height: 4rem;
+  --page-gutter: 1rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 2rem;
+  --space-8: 2.5rem;
+  --space-9: 3rem;
+  --space-10: 4rem;
+
+  /* Shared controls and type */
+  --radius: 6px;
+  --radius-tight: 4px;
+  --radius-pill: 999px;
+  --border: 1px solid var(--rule);
+  --border-strong: 1px solid var(--rule-strong);
+  --edge-width: 4px;
+  --focus-ring: 3px solid var(--accent-strong);
+  --underline-thickness: 0.08em;
+  --underline-offset: 0.16em;
+  --control-height: 2.75rem;
+  --icon-size: 2.25rem;
+  --avatar-size: 4.5rem;
+  --anchor-offset: 3.125rem;
+  --font-size-xs: 0.78rem;
+  --font-size-sm: 0.875rem;
+  --font-size-ui: 0.9375rem;
+  --font-size-base: 1rem;
+  --font-size-body: 1.0625rem;
+  --font-size-lead: 1.125rem;
+  --font-size-h4: 1.125rem;
+  --font-size-h3: 1.35rem;
+  --font-size-h2: 1.7rem;
+  --font-size-h1: 2.25rem;
+  --font-size-page-title: 2.5rem;
+  --line-tight: 1.12;
+  --line-snug: 1.35;
+  --line-base: 1.55;
+  --line-prose: 1.68;
+  --body-font: 'Public Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --header-font: 'Public Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --prose-font: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --mono-font: 'Source Code Pro', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.topic-authors {
+  --topic-accent: var(--accent);
+  --topic-accent-soft: var(--accent-wash);
+  --topic-accent-border: var(--rule-strong);
+}
+
+.topic-program {
+  --topic-accent: var(--brand-2);
+  --topic-accent-soft: var(--surface-soft);
+  --topic-accent-border: var(--rule-strong);
+}
+
+.topic-attend {
+  --topic-accent: var(--accent-strong);
+  --topic-accent-soft: var(--accent-wash);
+  --topic-accent-border: var(--rule-strong);
+}
+
+.topic-organization {
+  --topic-accent: var(--accent-strong);
+  --topic-accent-soft: var(--accent-wash);
+  --topic-accent-border: var(--rule-strong);
+}

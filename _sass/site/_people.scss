@@ -1,0 +1,126 @@
+@use "mixins" as *;
+
+/* ==========================================================================
+   Organization Page
+   ========================================================================== */
+
+.organizer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--space-7);
+  row-gap: var(--space-6);
+}
+
+.legal-provider {
+  margin: var(--space-6) 0 0;
+  padding-top: var(--space-6);
+  border-top: var(--border);
+}
+
+.legal-provider h2 {
+  margin: 0 0 var(--space-3);
+  color: var(--brand);
+  font-size: var(--font-size-ui);
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.legal-provider p {
+  margin: 0 0 var(--space-2);
+}
+
+.legal-provider address {
+  margin: 0 0 var(--space-4);
+  font-style: normal;
+  line-height: var(--line-base);
+}
+
+.organizer-featured {
+  margin: 0 0 var(--space-6);
+  padding-bottom: var(--space-6);
+  border-bottom: var(--border);
+}
+
+.organizer-role {
+  padding-top: var(--space-4);
+  border-top: var(--border);
+}
+
+.organizer-grid .organizer-role:nth-child(1),
+.organizer-grid .organizer-role:nth-child(2) {
+  border-top: 0;
+}
+
+.organizer-featured h2,
+.organizer-role h2 {
+  margin: 0 0 var(--space-3);
+  color: var(--brand);
+  font-size: var(--font-size-ui);
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.organizer-featured__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+.organizer-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.organizer-person {
+  margin: var(--space-2) 0 0;
+}
+
+.organizer-person--photo {
+  display: grid;
+  grid-template-columns: var(--avatar-size) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-4);
+  margin: 0;
+}
+
+.organizer-photo {
+  width: var(--avatar-size);
+  aspect-ratio: 543 / 620;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: 0 0 0 1px var(--rule);
+  background: var(--surface);
+}
+
+.organizer-person__details {
+  min-width: 0;
+}
+
+.organizer-person__name {
+  @include ui-text(var(--font-size-base), 800, 1.3);
+  text-decoration: none;
+}
+
+.organizer-person__name:hover,
+.organizer-person__name:focus {
+  @include inline-underline;
+}
+
+.organizer-person__affiliation {
+  @include ui-text(var(--font-size-sm), 600, var(--line-snug));
+  display: block;
+  margin-top: var(--space-1);
+  color: var(--muted);
+}
+
+/* ==========================================================================
+   Venue Page
+   ========================================================================== */
+
+.venue-note {
+  color: var(--muted);
+  font-size: var(--font-size-ui);
+}

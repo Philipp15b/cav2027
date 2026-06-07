@@ -1,0 +1,34 @@
+@mixin ui-text($size: var(--font-size-ui), $weight: 600, $line-height: var(--line-snug)) {
+  font-family: var(--header-font);
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@mixin prose-text($size: var(--font-size-body), $line-height: var(--line-prose)) {
+  font-family: var(--prose-font);
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin focus-ring($offset: 3px) {
+  outline: var(--focus-ring);
+  outline-offset: $offset;
+}
+
+@mixin inline-underline($style: solid, $thickness: var(--underline-thickness)) {
+  text-decoration: underline;
+  text-decoration-style: $style;
+  text-decoration-thickness: $thickness;
+  text-underline-offset: var(--underline-offset);
+}
+
+@mixin button-reset {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}

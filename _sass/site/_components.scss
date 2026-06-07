@@ -1,0 +1,286 @@
+@use "mixins" as *;
+
+/* ==========================================================================
+   Program Overview
+   ========================================================================== */
+
+.program-overview {
+  margin: var(--space-7) 0 0;
+  padding-top: var(--space-5);
+  border-top: var(--border);
+}
+
+.program-overview h2 {
+  margin: 0 0 var(--space-2);
+  padding-top: 0;
+  border-top: 0;
+}
+
+.program-overview p {
+  @include ui-text(var(--font-size-ui), 600, var(--line-base));
+  margin: var(--space-2) 0 var(--space-5);
+  color: var(--muted);
+}
+
+.program-overview__list {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.program-overview__list > div {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.85fr) minmax(0, 1.15fr);
+  align-items: start;
+  gap: var(--space-4);
+  margin: 0;
+  padding: var(--space-2) 0;
+}
+
+.program-overview__list > div:first-child {
+  border-top: 0;
+}
+
+.program-overview__list dt,
+.program-overview__list dd {
+  margin: 0;
+  font-family: var(--header-font);
+  line-height: var(--line-snug);
+}
+
+.program-overview__list dt {
+  color: var(--brand);
+  font-weight: 800;
+}
+
+.program-overview__list dd {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   Shared Components
+   ========================================================================== */
+
+.quick-link-directory {
+  margin: var(--space-7) 0 0;
+  padding-top: var(--space-5);
+}
+
+.quick-link-directory h2 {
+  margin: 0 0 var(--space-4);
+  padding-top: 0;
+  border-top: 0;
+}
+
+.quick-link-directory__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.quick-link-directory__group {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.32fr) minmax(0, 1fr);
+  align-items: baseline;
+  gap: var(--space-4);
+  padding: 0;
+}
+
+.quick-link-directory__group h3 {
+  margin: 0;
+  color: var(--brand);
+  font-size: var(--font-size-ui);
+}
+
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+  margin: var(--space-6) 0 0;
+}
+
+.quick-link-directory .quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2) var(--space-4);
+  grid-template-columns: none;
+  margin: 0;
+  border-top: 0;
+}
+
+.quick-link-directory .button-link {
+  @include ui-text(var(--font-size-sm), 600, var(--line-snug));
+  min-height: 0;
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--brand-link);
+  text-align: left;
+}
+
+.quick-link-directory .button-link:hover,
+.quick-link-directory .button-link:focus {
+  background: transparent;
+  color: var(--accent-dark);
+  @include inline-underline;
+}
+
+.quick-links--pair {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.button-link {
+  @include ui-text(var(--font-size-sm), 800, 1.2);
+  min-height: var(--control-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--accent-strong);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--accent-strong);
+  text-align: center;
+}
+
+.button-link:hover,
+.button-link:focus {
+  border-color: var(--accent-strong);
+  background: var(--accent-warm);
+  color: var(--accent-strong);
+}
+
+.btn-primary,
+.button-primary,
+a.btn-primary {
+  border-color: var(--accent-strong);
+  background: var(--accent-strong);
+  color: var(--surface);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.button-primary:hover,
+.button-primary:focus,
+a.btn-primary:hover,
+a.btn-primary:focus {
+  border-color: var(--accent-hover);
+  background: var(--accent-hover);
+  color: var(--surface);
+}
+
+.btn-secondary,
+.button-secondary {
+  border: 1px solid var(--accent-strong);
+  background: transparent;
+  color: var(--accent-strong);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.button-secondary:hover,
+.button-secondary:focus {
+  background: var(--accent-warm);
+  color: var(--accent-strong);
+}
+
+.previous-conferences {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin: var(--space-4) 0 0;
+  color: var(--muted);
+  font-family: var(--header-font);
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+}
+
+.previous-conferences span:first-child {
+  font-weight: 700;
+}
+
+.previous-conferences a {
+  color: var(--brand-link);
+  font-weight: 800;
+}
+
+.callout {
+  margin: var(--space-7) 0;
+  padding: var(--space-4) var(--space-5);
+  border: var(--border);
+  border-left: var(--edge-width) solid var(--callout-border);
+  border-radius: var(--radius);
+  background: var(--accent-warm);
+}
+
+.callout__label {
+  @include ui-text(var(--font-size-xs), 800, var(--line-snug));
+  display: block;
+  margin-bottom: var(--space-2);
+  color: var(--muted);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.callout p {
+  margin: 0;
+}
+
+.deadline-date {
+  @include button-reset;
+  display: inline;
+  border-radius: var(--radius-tight);
+  font-weight: inherit;
+  line-height: inherit;
+  text-align: left;
+  @include inline-underline(dotted);
+  vertical-align: baseline;
+  cursor: pointer;
+}
+
+.deadline-date:hover,
+.deadline-date:focus {
+  color: inherit;
+  text-decoration-style: solid;
+}
+
+.deadline-date:focus-visible {
+  outline: 0;
+  background: transparent;
+  box-shadow: none;
+  text-decoration-color: var(--accent-strong);
+  text-decoration-thickness: 0.12em;
+}
+
+.deadline-date-popover {
+  --bs-popover-max-width: min(22rem, calc(100vw - 2rem));
+  --bs-popover-border-width: 1px;
+  --bs-popover-border-color: var(--rule);
+  --bs-popover-header-bg: var(--surface);
+  --bs-popover-header-color: var(--brand);
+  --bs-popover-body-color: var(--text);
+  --bs-popover-bg: var(--surface);
+  --bs-popover-box-shadow: var(--shadow-menu);
+  border: var(--border);
+  box-shadow: var(--shadow-menu);
+  font-family: var(--header-font);
+  line-height: 1.4;
+}
+
+.deadline-date-popover .popover-header {
+  @include ui-text(var(--font-size-sm), 800, var(--line-snug));
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: var(--border);
+  color: var(--brand);
+}
+
+.deadline-date-popover .popover-body {
+  padding: var(--space-3);
+}
