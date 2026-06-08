@@ -11,84 +11,121 @@ roles:
         url: https://moves.rwth-aachen.de/people/katoen/
         affiliation: RWTH Aachen University
         photo: /assets/img/organizers/joost-pieter-katoen.jpg
+        photo_source: https://www.ai.rwth-aachen.de/go/id/bhqnje#aaaaaaaaabhqoal
   - title: Steering Committee
     people:
       - name: Orna Grumberg
         url: https://orna.cswp.cs.technion.ac.il/
         affiliation: Technion
+        photo: /assets/img/organizers/orna-grumberg.jpg
+        photo_source: https://orna.cswp.cs.technion.ac.il/wp-content/uploads/sites/72/2015/12/Orna-Grumberg-ACM.jpg
       - name: Aarti Gupta
         url: https://www.cs.princeton.edu/~aartig/
         affiliation: Princeton University
+        photo: /assets/img/organizers/aarti-gupta.jpg
+        photo_source: https://www.cs.princeton.edu/~aartig/image002.jpg
       - name: Daniel Kröning
         url: https://www.kroening.com/
         affiliation: Amazon
+        photo: /assets/img/organizers/daniel-kroening.jpg
+        photo_source: https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=DHddutUAAAAJ&citpid=4
       - name: Ken McMillan
         url: https://www.cs.utexas.edu/people/faculty-researchers/ken-mcmillan
         affiliation: University of Texas at Austin
+        photo: /assets/img/organizers/ken-mcmillan.jpg
+        photo_source: https://www.cs.utexas.edu/sites/default/files/styles/faculty_photo/public/2024-02/mcmillan_kenneth.jpeg?itok=9bj_-A3B
   - title: Local Chair
     people:
       - name: Thomas van Binsbergen
         url: https://ltvanbinsbergen.nl/
         affiliation: University of Amsterdam
+        photo: /assets/img/organizers/thomas-van-binsbergen.jpg
+        photo_source: https://ltvanbinsbergen.nl/files/profile.jpg
   - title: Artifact Evaluation Chairs
     people:
       - name: Tim Quatmann
         url: https://moves.rwth-aachen.de/people/quatmann/
         affiliation: RWTH Aachen University
+        photo: /assets/img/organizers/tim-quatmann.jpg
+        photo_source: https://moves.rwth-aachen.de/wp-content/uploads/fotos/quatmann.jpg
       - name: Tom van Dijk
         url: https://www.tvandijk.nl/
         affiliation: University of Twente
+        photo: /assets/img/organizers/tom-van-dijk.jpg
+        photo_source: https://www.tvandijk.nl/img/tom-web.jpg
   - title: Workshop Chair
     people:
       - name: Sebastian Junges
         url: https://sjunges.github.io/
         affiliation: Radboud University
+        photo: /assets/img/organizers/sebastian-junges.jpg
+        photo_source: https://sjunges.github.io/images/profile.jpg
   - title: Industry Day Chair
     people:
       - name: Mariëlle Stoelinga
         url: https://research.utwente.nl/en/persons/mari%C3%ABlle-ia-stoelinga/
         affiliation: University of Twente
+        photo: /assets/img/organizers/marielle-stoelinga.jpg
+        photo_source: https://utwente.becdn.net/.wh/ea/uc/i1635b77a01031900f101c3db7303c0c6ee3c6a9055570c016340014001804100000000/miastoelinga.jpg
   - title: Fundraising Chairs
     people:
       - name: Mariëlle Stoelinga
         url: https://research.utwente.nl/en/persons/mari%C3%ABlle-ia-stoelinga/
         affiliation: University of Twente
+        photo: /assets/img/organizers/marielle-stoelinga.jpg
+        photo_source: https://utwente.becdn.net/.wh/ea/uc/i1635b77a01031900f101c3db7303c0c6ee3c6a9055570c016340014001804100000000/miastoelinga.jpg
       - name: Anton Wijs
         url: https://research.tue.nl/en/persons/anton-j-wijs/
         affiliation: Eindhoven University of Technology
+        photo: /assets/img/organizers/anton-wijs.jpg
+        photo_source: https://research.tue.nl/files-asset/92667684/Wijs_Anton_WI_PO_AS_5375.jpg/
   - title: Publicity Chair
     people:
       - name: Georgiana Caltais
         url: https://people.utwente.nl/g.g.c.caltais
         affiliation: University of Twente
+        photo: /assets/img/organizers/georgiana-caltais.jpg
+        photo_source: https://utwente.becdn.net/.wh/ea/uc/i5aa85675010123e214004a76ac0227dc943ccb336c370c016340014001804100000000/ggccaltais.jpg
   - title: Proceedings Chair
     people:
       - name: Ernst Moritz Hahn
         url: https://emhahn.de/
         affiliation: University of Twente
+        photo: /assets/img/organizers/ernst-moritz-hahn.jpg
+        photo_source: https://emhahn.de/portrait-high-res.jpg
   - title: Financial Chair
     people:
       - name: Arnd Hartmanns
         url: https://arnd.hartmanns.name/
         affiliation: University of Twente
+        photo: /assets/img/organizers/arnd-hartmanns.jpg
+        photo_source: https://arnd.hartmanns.name/arnd.jpg
   - title: Volunteers Chair
     people:
       - name: Fernando Castor
         url: https://fernandocastor.github.io/
         affiliation: University of Twente
+        photo: /assets/img/organizers/fernando-castor.jpg
+        photo_source: https://utwente.becdn.net/.wh/ea/uc/i4d8b24de010397d6de007f7c7503a9d0af05b386fd250c016340014001804100000000/eu16.jpg
   - title: Merchandising Chair
     people:
       - name: Milan Lopuhaä-Zwakenberg
         url: https://milanlopuhaazwakenberg.personalweb.utwente.nl/
         affiliation: University of Twente
+        photo: /assets/img/organizers/milan-lopuhaa-zwakenberg.jpg
+        photo_source: https://utwente.becdn.net/.wh/ea/uc/i26605b850103ad98f20117d37403b08722876ee8160b0c016340014001804100000000/malopuhaa.png
   - title: Website Chair
     people:
       - name: Philipp Schröer
-        url: https://moves.rwth-aachen.de/people/philipp-schroer/
+        url: https://pschroer.de/
         affiliation: RWTH Aachen University
+        photo: /assets/img/organizers/philipp-schroer.jpg
+        photo_source: https://pschroer.de/generated-images/profile-picture.webp
   - title: Mentoring Workshop Chairs
     people:
       - name: Mukund Raghothaman
         url: https://r-mukund.github.io/
         affiliation: University of Southern California
+        photo: /assets/img/organizers/mukund-raghothaman.jpg
+        photo_source: https://r-mukund.github.io/images/hs/m2018-57.jpg
       - name: TBA

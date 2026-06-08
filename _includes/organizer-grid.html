@@ -1,11 +1,12 @@
 {% assign organizer_roles = include.roles | default: site.data.organizers.roles %}
+{% assign organizer_heading_level = include.heading_level | default: 2 %}
 {% for role in organizer_roles %}
   {% if role.featured %}
   <section class="organizer-featured" aria-labelledby="organizer-featured-{{ forloop.index }}">
-    <h2 id="organizer-featured-{{ forloop.index }}">{{ role.title }}</h2>
+    <h{{ organizer_heading_level }} class="organizer-role__title" id="organizer-featured-{{ forloop.index }}">{{ include.featured_title | default: role.title }}</h{{ organizer_heading_level }}>
     <ul class="organizer-list organizer-featured__list">
     {% for person in role.people %}
-      <li class="organizer-person organizer-person--photo">
+      <li class="organizer-person{% if person.photo %} organizer-person--photo{% endif %}">
         {% if person.photo %}
           <img class="organizer-photo" src="{{ person.photo | relative_url }}" alt="" width="72" height="82" loading="eager" decoding="async">
         {% endif %}
@@ -30,10 +31,13 @@
 {% for role in organizer_roles %}
   {% unless role.featured %}
   <section class="organizer-role">
-    <h2>{{ role.title }}</h2>
+    <h{{ organizer_heading_level }} class="organizer-role__title">{{ role.title }}</h{{ organizer_heading_level }}>
     <ul class="organizer-list">
     {% for person in role.people %}
-      <li class="organizer-person">
+      <li class="organizer-person{% if person.photo %} organizer-person--photo{% endif %}">
+        {% if person.photo %}
+          <img class="organizer-photo" src="{{ person.photo | relative_url }}" alt="" width="72" height="82" loading="lazy" decoding="async">
+        {% endif %}
         <span class="organizer-person__details">
           {% if person.url %}
             <a class="organizer-person__name" href="{{ person.url }}">{{ person.name }}</a>

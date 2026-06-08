@@ -4,11 +4,11 @@
    Organization Page
    ========================================================================== */
 
-.organizer-grid {
+.organizer-grid,
+.organizer-featured__list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: var(--space-7);
-  row-gap: var(--space-6);
+  gap: var(--space-7);
 }
 
 .legal-provider {
@@ -17,7 +17,12 @@
   border-top: var(--border);
 }
 
-.legal-provider h2 {
+.organizer-featured {
+  margin: 0 0 var(--space-7);
+}
+
+.legal-provider h2,
+.organizer-role__title {
   margin: 0 0 var(--space-3);
   color: var(--brand);
   font-size: var(--font-size-ui);
@@ -35,45 +40,15 @@
   line-height: var(--line-base);
 }
 
-.organizer-featured {
-  margin: 0 0 var(--space-6);
-  padding-bottom: var(--space-6);
-  border-bottom: var(--border);
-}
-
-.organizer-role {
-  padding-top: var(--space-4);
-  border-top: var(--border);
-}
-
-.organizer-grid .organizer-role:nth-child(1),
-.organizer-grid .organizer-role:nth-child(2) {
-  border-top: 0;
-}
-
-.organizer-featured h2,
-.organizer-role h2 {
-  margin: 0 0 var(--space-3);
-  color: var(--brand);
-  font-size: var(--font-size-ui);
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
-.organizer-featured__list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-6);
-}
-
 .organizer-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.organizer-person {
-  margin: var(--space-2) 0 0;
+.organizer-role .organizer-list {
+  display: grid;
+  gap: var(--space-3);
 }
 
 .organizer-person--photo {
@@ -81,7 +56,6 @@
   grid-template-columns: var(--avatar-size) minmax(0, 1fr);
   align-items: center;
   gap: var(--space-4);
-  margin: 0;
 }
 
 .organizer-photo {
