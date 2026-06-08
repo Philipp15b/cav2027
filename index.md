@@ -11,7 +11,7 @@ cover-img: "/assets/img/kit-royal-tropical-institute.jpg"
   <p>The conference spans theoretical results, algorithms, implementation techniques, and concrete applications, with a strong emphasis on practical verification tools.</p>
   <p>CAV continues to spur progress in hardware and software verification while broadening its scope to emerging domains, including machine learning, quantum verification, autonomous systems, and computer security.</p>
   <p>CAV's first Dutch edition connects the conference with a deep local tradition in computing, including <a href="https://en.wikipedia.org/wiki/Edsger_W._Dijkstra">Edsger W. Dijkstra</a>'s lasting influence on programming, algorithms, and formal reasoning.</p>
-  <p>The conference will take place in <a href="{{ '/amsterdam/' | relative_url }}">Amsterdam</a> at <a href="{{ '/venue/' | relative_url }}">KIT Royal Tropical Institute</a>, a historic venue beside Oosterpark and within easy reach of the city's canals, museums, cafes, restaurants, and public transport.</p>
+  <p>The conference will take place in <a href="{{ '/amsterdam/' | relative_url }}">Amsterdam</a> at <a href="{{ '/venue/' | relative_url }}">{{ site.data.conference.venue.name }}</a>, formerly the {{ site.data.conference.venue.former_name }}, a historic venue beside Oosterpark and within easy reach of the city's canals, museums, cafes, restaurants, and public transport.</p>
 </div>
 
 <section class="important-dates" aria-labelledby="important-dates-heading">

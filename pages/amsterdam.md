@@ -24,7 +24,7 @@ By rail, Amsterdam is reachable by [international train services](https://www.ns
 
 For public-transport tickets, visitors can use [OVpay with a payment card](https://www.ovpay.nl/en/paymentcard) without downloading an app: check in and out with a debit card, credit card, mobile phone, or smartwatch, using the same card or device each time. Visitors who prefer a day ticket can buy one in the [GVB travel app](https://www.gvb.nl/en/travel-information/gvb-app).
 
-CAV 2027 takes place at [KIT Royal Tropical Institute]({{ site.data.conference.venue.official_url }}), beside Oosterpark and east of Amsterdam's city center. The venue can be reached by public transport within Amsterdam. For venue-specific directions, see the [Venue page]({{ "/venue/" | relative_url }}).
+CAV 2027 takes place at [{{ site.data.conference.venue.name }}]({{ site.data.conference.venue.official_url }}), formerly the {{ site.data.conference.venue.former_name }}, beside Oosterpark and east of Amsterdam's city center. The venue can be reached by public transport within Amsterdam. For venue-specific directions, see the [Venue page]({{ "/venue/" | relative_url }}).
 
 ## Museums and city life
 

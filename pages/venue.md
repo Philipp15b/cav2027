@@ -3,14 +3,14 @@ layout: page
 title: Venue
 permalink: /venue/
 topic: attend
-share-description: CAV 2027 will be held at KIT Royal Tropical Institute in Amsterdam.
+share-description: CAV 2027 will be held at KIT in Amsterdam.
 cover-img: "/assets/img/kit-royal-tropical-institute.jpg"
 ---
 
-## KIT Royal Tropical Institute
+## KIT
 
 <div class="lead-copy">
-  <p>CAV 2027 will take place at <a href="{{ site.data.conference.venue.official_url }}">{{ site.data.conference.venue.name }}</a>, beside Oosterpark and east of Amsterdam's city center.</p>
+  <p>CAV 2027 will take place at <a href="{{ site.data.conference.venue.official_url }}">{{ site.data.conference.venue.name }}</a>, formerly the {{ site.data.conference.venue.former_name }}, beside Oosterpark and east of Amsterdam's city center.</p>
   <p>KIT is a historic conference venue beside one of Amsterdam's city parks, with museums, cafes, and restaurants in the surrounding area.</p>
 </div>
 
@@ -28,7 +28,7 @@ Parking in inner Amsterdam is limited and can be expensive compared with public 
 
 ## Around Oosterpark
 
-KIT Royal Tropical Institute is beside Oosterpark. The surrounding area includes parks, museums, cafes, and restaurants within walking distance.
+KIT is beside Oosterpark. The surrounding area includes parks, museums, cafes, and restaurants within walking distance.
 
 <nav class="quick-links" aria-label="Venue links">
   <a class="button-link" href="{{ "/amsterdam/" | relative_url }}">Amsterdam</a>
