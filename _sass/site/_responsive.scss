@@ -15,12 +15,12 @@
 
 @media (min-width: 1200px) {
   .intro-header:not(.home-hero) {
-    margin-top: calc(var(--nav-height) + var(--space-10));
+    margin-top: var(--space-10);
   }
 
   .intro-header.big-img {
     min-height: 31rem;
-    margin-top: var(--nav-height);
+    margin-top: 0;
   }
 
   .intro-header.big-img .page-heading {

@@ -74,7 +74,7 @@
   --control-height: 2.75rem;
   --icon-size: 2.25rem;
   --avatar-size: 4.5rem;
-  --anchor-offset: 3.125rem;
+  --anchor-offset: calc(var(--nav-height) + var(--space-4));
   --font-size-xs: 0.78rem;
   --font-size-sm: 0.875rem;
   --font-size-ui: 0.9375rem;

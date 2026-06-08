@@ -12,6 +12,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-top: var(--nav-height);
   overflow-wrap: break-word;
   background: var(--bg);
   color: var(--text);
@@ -168,11 +169,16 @@ hr.small {
   text-shadow: none;
 }
 
+html {
+  scroll-padding-top: var(--anchor-offset);
+}
+
+[id] {
+  scroll-margin-top: var(--anchor-offset);
+}
+
 :target::before {
-  content: "";
-  display: block;
-  height: var(--anchor-offset);
-  margin: calc(-1 * var(--anchor-offset)) 0 0;
+  content: none;
 }
 
 .skip-link {

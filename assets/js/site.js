@@ -1,11 +1,10 @@
-// Modules expose init() and, when Turbo snapshots need cleanup, cleanup().
-// Site wires those module hooks into the initial page load and Turbo visits.
+// Modules expose page lifecycle hooks; global listeners dispatch the hooks below.
 const HeaderParallax = {
   state: null,
 
-  init() {
+  afterLoad() {
     // Turbo can re-enter a page from cache, so replace any old listeners before wiring new ones.
-    this.cleanup();
+    this.beforeCache();
 
     // Shift hero image backgrounds only while visible; requestAnimationFrame keeps scroll work bounded.
     const headers = Array.from(document.querySelectorAll(".intro-header.big-img"));
@@ -52,7 +51,7 @@ const HeaderParallax = {
     };
   },
 
-  cleanup() {
+  beforeCache() {
     if (!this.state) return;
 
     this.state.stop();
@@ -64,15 +63,13 @@ const HeaderParallax = {
 };
 
 const BootstrapTooltips = {
-  init() {
-    if (!window.bootstrap) return;
+  afterLoad() {
     document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((trigger) => {
       window.bootstrap.Tooltip.getOrCreateInstance(trigger);
     });
   },
 
-  cleanup() {
-    if (!window.bootstrap) return;
+  beforeCache() {
     // Bootstrap appends transient DOM; dispose it before Turbo stores the page snapshot.
     document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach((trigger) => {
       window.bootstrap.Tooltip.getInstance(trigger)?.dispose();
@@ -81,10 +78,10 @@ const BootstrapTooltips = {
 };
 
 const DeadlinePopovers = {
-  init() {
+  afterLoad() {
     // AoE deadline controls keep the canonical UTC instant in markup; the popover formats it locally.
     const triggers = Array.from(document.querySelectorAll("[data-local-deadline]"));
-    if (!triggers.length || !window.bootstrap) return;
+    if (!triggers.length) return;
 
     triggers.forEach((trigger) => {
       const deadlineUtc = trigger.getAttribute("data-deadline-utc");
@@ -120,8 +117,7 @@ const DeadlinePopovers = {
     });
   },
 
-  cleanup() {
-    if (!window.bootstrap) return;
+  beforeCache() {
     // Avoid caching open popovers or stale Bootstrap instances across Turbo visits.
     document.querySelectorAll("[data-local-deadline]").forEach((trigger) => {
       window.bootstrap.Popover.getInstance(trigger)?.dispose();
@@ -129,22 +125,39 @@ const DeadlinePopovers = {
   }
 };
 
-const Site = {
-  modules: [
-    HeaderParallax,
-    DeadlinePopovers,
-    BootstrapTooltips
-  ],
+const BootstrapNavState = {
+  beforeCache() {
+    // Turbo is leaving this page; skip the collapse animation and cache stable closed markup.
+    document.querySelectorAll(".navbar-custom .navbar-collapse.show, .navbar-custom .navbar-collapse.collapsing").forEach((collapse) => {
+      collapse.classList.remove("show", "collapsing");
+      collapse.classList.add("collapse");
+      collapse.style.height = "";
+    });
 
-  init() {
-    this.modules.forEach((module) => module.init());
-  },
+    document.querySelectorAll(".navbar-custom .navbar-toggler[aria-expanded='true']").forEach((toggle) => {
+      toggle.classList.add("collapsed");
+      toggle.setAttribute("aria-expanded", "false");
+    });
 
-  cleanup() {
-    this.modules.forEach((module) => module.cleanup?.());
+    document.querySelectorAll(".navbar-custom .dropdown-toggle.show").forEach((toggle) => {
+      window.bootstrap.Dropdown.getInstance(toggle)?.hide();
+    });
   }
 };
 
-document.addEventListener("DOMContentLoaded", () => Site.init());
-document.addEventListener("turbo:load", () => Site.init());
-document.addEventListener("turbo:before-cache", () => Site.cleanup());
+const afterLoad = () => {
+  HeaderParallax.afterLoad();
+  DeadlinePopovers.afterLoad();
+  BootstrapTooltips.afterLoad();
+};
+
+const beforeCache = () => {
+  HeaderParallax.beforeCache();
+  DeadlinePopovers.beforeCache();
+  BootstrapTooltips.beforeCache();
+  BootstrapNavState.beforeCache();
+};
+
+document.addEventListener("DOMContentLoaded", afterLoad);
+document.addEventListener("turbo:load", afterLoad);
+document.addEventListener("turbo:before-cache", beforeCache);
