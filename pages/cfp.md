@@ -14,12 +14,26 @@ Submission categories, formatting instructions, and the submission site are comi
 
 All deadlines are AoE (Anywhere on Earth).
 
-| Item | Date |
-| --- | --- |
-| Submission deadline | <button class="deadline-date" type="button" data-local-deadline data-deadline-utc="2027-01-21T11:59:00Z" data-original-deadline="Wednesday, 20 January 2027, 23:59 AoE"><time datetime="2027-01-21T11:59:00Z">Wednesday, 20 January 2027, 23:59 AoE</time></button> |
-| Response period | <button class="deadline-date" type="button" data-local-deadline data-deadline-utc="2027-04-09T11:59:00Z" data-original-deadline="Monday, 5 April 2027 - Thursday, 8 April 2027, 23:59 AoE">Monday, 5 April 2027 &ndash; Thursday, 8 April 2027, 23:59 AoE</button> |
-| Notification | Friday, 23 April 2027 |
-| Camera-ready deadline | TBA |
+<table>
+  <tbody>
+    <tr>
+      <td>Submission deadline</td>
+      <td><button class="deadline-date" type="button" data-local-deadline data-deadline-utc="2027-01-21T11:59:00Z" data-original-deadline="Wednesday, 20 January 2027, 23:59 AoE"><time datetime="2027-01-21T11:59:00Z">Wednesday, 20 January 2027, 23:59 AoE</time></button></td>
+    </tr>
+    <tr>
+      <td>Response period</td>
+      <td><button class="deadline-date" type="button" data-local-deadline data-deadline-utc="2027-04-09T11:59:00Z" data-original-deadline="Monday, 5 April 2027 - Thursday, 8 April 2027, 23:59 AoE">Monday, 5 April 2027 &ndash; Thursday, 8 April 2027, 23:59 AoE</button></td>
+    </tr>
+    <tr>
+      <td>Notification</td>
+      <td>Friday, 23 April 2027</td>
+    </tr>
+    <tr>
+      <td>Camera-ready deadline</td>
+      <td>TBA</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Related Calls
 

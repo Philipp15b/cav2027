@@ -14,11 +14,31 @@ Dates, submission instructions, review process details, and badge criteria are c
 
 All deadlines are expected to be AoE unless stated otherwise.
 
-| Item | Date |
-| --- | --- |
-| Artifact registration | TBA |
-| Artifact submission | TBA |
-| Smoke test phase | TBA |
-| Artifact revision period | TBA |
-| Full review period | TBA |
-| Artifact notification | TBA |
+<table>
+  <tbody>
+    <tr>
+      <td>Artifact registration</td>
+      <td>TBA</td>
+    </tr>
+    <tr>
+      <td>Artifact submission</td>
+      <td>TBA</td>
+    </tr>
+    <tr>
+      <td>Smoke test phase</td>
+      <td>TBA</td>
+    </tr>
+    <tr>
+      <td>Artifact revision period</td>
+      <td>TBA</td>
+    </tr>
+    <tr>
+      <td>Full review period</td>
+      <td>TBA</td>
+    </tr>
+    <tr>
+      <td>Artifact notification</td>
+      <td>TBA</td>
+    </tr>
+  </tbody>
+</table>

@@ -25,23 +25,8 @@ body > main {
   flex: 1;
 }
 
-main.container-md {
-  max-width: var(--container-max);
-}
-
-main.container-md > .row {
-  justify-content: center;
-}
-
-main.container-md > .row > div {
-  width: 100%;
-  max-width: var(--content-max);
-  flex: 0 0 100%;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .page-content-card {
+  @include prose-text;
   padding: var(--space-7);
   border: var(--border);
   border-radius: var(--radius);
@@ -68,8 +53,7 @@ main.container-md > .row > div {
    ========================================================================== */
 
 p {
-  @include prose-text;
-  margin: var(--space-6) 0;
+  margin: var(--space-4) 0;
 }
 
 .page-content-card > p,
@@ -104,7 +88,8 @@ h1 {
 }
 
 h2 {
-  margin-top: var(--space-7);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
   font-size: var(--font-size-h2);
 }
 
@@ -119,7 +104,45 @@ h2::after {
 }
 
 h3 {
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
   font-size: var(--font-size-h3);
+}
+
+h2 + p,
+h3 + p {
+  margin-top: var(--space-2);
+}
+
+main ul:not([class]),
+main ol:not([class]) {
+  margin: var(--space-4) 0;
+  padding-left: var(--space-6);
+}
+
+main li:not([class]) + li:not([class]) {
+  margin-top: var(--space-1);
+}
+
+main p + ul:not([class]),
+main p + ol:not([class]) {
+  margin-top: calc(-1 * var(--space-2));
+}
+
+p + h2,
+ul + h2,
+ol + h2,
+table + h2,
+nav + h2,
+div + h2 {
+  margin-top: var(--space-6);
+}
+
+p + h3,
+ul + h3,
+ol + h3,
+table + h3 {
+  margin-top: var(--space-5);
 }
 
 h4 {
@@ -157,6 +180,17 @@ hr.small {
   border-width: 0.22rem;
   border-color: inherit;
   border-radius: var(--radius-tight);
+}
+
+hr:not(.small) {
+  margin: var(--space-6) 0 var(--space-4);
+  border: 0;
+  border-top: var(--border);
+  opacity: 1;
+}
+
+hr:not(.small) + h2 {
+  margin-top: 0;
 }
 
 /* ==========================================================================

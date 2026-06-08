@@ -77,6 +77,7 @@ table {
   border-radius: 0;
   border-collapse: collapse;
   font-family: var(--header-font);
+  table-layout: fixed;
 }
 
 table tr {
@@ -114,6 +115,11 @@ table th {
 table th + th,
 table td + td {
   padding-left: var(--space-4);
+}
+
+table th:first-child,
+table td:first-child {
+  width: 38%;
 }
 
 table td:first-child {
