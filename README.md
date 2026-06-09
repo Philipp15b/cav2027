@@ -26,7 +26,7 @@ Serve locally:
 bundle exec jekyll serve --future
 ```
 
-The local server is usually available at `http://127.0.0.1:4000/`.
+The local server is usually available at `http://127.0.0.1:4000/2027/`.
 
 ## Content
 
@@ -48,4 +48,4 @@ The GitHub Actions workflow installs the Gemfile dependencies with Bundler and b
 bundle exec jekyll build --future --config _config.yml,_config_ci.yml
 ```
 
-On pushes to `master`, the generated `_site/` directory is uploaded and deployed to GitHub Pages.
+On pushes to `master`, the generated `_site/` directory is uploaded and deployed to GitHub Pages at <https://conferences.i-cav.org/2027/>.

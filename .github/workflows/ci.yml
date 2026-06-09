@@ -32,7 +32,8 @@ jobs:
       - name: Setup CI config
         run: |
           echo "---" > _config_ci.yml
-          echo "baseurl: ${{ steps.configure-pages.outputs.base_path }}" >> _config_ci.yml
+          echo "url: https://conferences.i-cav.org" >> _config_ci.yml
+          echo "baseurl: /2027" >> _config_ci.yml
       - name: Build site
         env:
           JEKYLL_ENV: production
@@ -46,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://conferences.i-cav.org/2027/
     steps:
       - name: Deploy
         id: deployment
